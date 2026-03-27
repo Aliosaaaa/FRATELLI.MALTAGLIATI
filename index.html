@@ -1,397 +1,242 @@
-<!DOCTYPE html>
-
-<html lang="it">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Fratelli Maltagliati - Castagni, Farina e Libertà</title>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <style>
-
-        body {
-
-            font-family: 'Inter', sans-serif;
-
-            scroll-behavior: smooth;
-
-        }
-
-        h1, h2, h3 {
-
-            font-family: 'Crimson Pro', serif;
-
-        }
-
-        .hero-gradient {
-
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1508349177119-83c02a71f2b8?auto=format&fit=crop&w=1920&q=80');
-
-            background-size: cover;
-
-            background-position: center;
-
-        }
-
-        .card-wood {
-
-            background-color: #fdfaf7;
-
-            border: 1px solid #e5d5c5;
-
-        }
-
-    </style>
-
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #4689cc; -webkit-text-stroke: #4689cc}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #8cd3fe; -webkit-text-stroke: #8cd3fe}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #c27e65; -webkit-text-stroke: #c27e65}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #cacaca; -webkit-text-stroke: #cacaca}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #71c083; -webkit-text-stroke: #71c083}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #cacaca; -webkit-text-stroke: #cacaca; min-height: 16.0px}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #6d7378; -webkit-text-stroke: #6d7378}
+    span.s1 {font-kerning: none; background-color: #171818}
+    span.s2 {font-kerning: none; color: #8cd3fe; background-color: #171818; -webkit-text-stroke: 0px #8cd3fe}
+    span.s3 {font-kerning: none; color: #6d6d6d; background-color: #171818; -webkit-text-stroke: 0px #6d6d6d}
+    span.s4 {font-kerning: none; color: #cacaca; background-color: #171818; -webkit-text-stroke: 0px #cacaca}
+    span.s5 {font-kerning: none; color: #c27e65; background-color: #171818; -webkit-text-stroke: 0px #c27e65}
+    span.s6 {font-kerning: none; color: #4689cc; background-color: #171818; -webkit-text-stroke: 0px #4689cc}
+    span.s7 {font-kerning: none; color: #d4d4d4; background-color: #171818; -webkit-text-stroke: 0px #d4d4d4}
+    span.s8 {font-kerning: none; color: #71c083; background-color: #171818; -webkit-text-stroke: 0px #71c083}
+    span.s9 {font-kerning: none; color: #a7c598; background-color: #171818; -webkit-text-stroke: 0px #a7c598}
+    span.s10 {font-kerning: none}
+  </style>
 </head>
-
-<body class="bg-[#faf7f2] text-stone-800">
-
-    <!-- Navigation -->
-
-    <nav class="fixed w-full z-50 bg-[#faf7f2]/90 backdrop-blur-sm border-b border-stone-200">
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-            <div class="flex justify-between h-20 items-center">
-
-                <div class="flex items-center">
-
-                    <span class="text-2xl font-bold text-amber-900 tracking-tight">FRATELLI MALTAGLIATI</span>
-
-                </div>
-
-                <div class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-widest text-stone-600">
-
-                    <a href="#storia" class="hover:text-amber-700 transition">La Storia</a>
-
-                    <a href="#progetti" class="hover:text-amber-700 transition">Progetti</a>
-
-                    <a href="#farina" class="hover:text-amber-700 transition">La Farina</a>
-
-                    <a href="#contatti" class="bg-amber-800 text-white px-5 py-2 rounded-full hover:bg-amber-900 transition">Adotta un Castagno</a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </nav>
-
-    <!-- Hero Section -->
-
-    <section class="relative h-screen flex items-center justify-center hero-gradient text-white pt-20">
-
-        <div class="text-center px-4 max-w-4xl">
-
-            <h1 class="text-5xl md:text-7xl font-bold mb-6">Custodi dei Boschi e del Tempo</h1>
-
-            <p class="text-xl md:text-2xl mb-10 font-light opacity-90 italic">"Non vendiamo solo farina, vendiamo la nostra storia e il rispetto per la terra."</p>
-
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-
-                <a href="#progetti" class="bg-amber-700 hover:bg-amber-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition shadow-xl">Scopri il Progetto</a>
-
-                <a href="#farina" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-lg font-semibold text-lg transition">La nostra Farina</a>
-
-            </div>
-
-        </div>
-
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
-
-        </div>
-
-    </section>
-
-    <!-- La Storia Section -->
-
-    <section id="storia" class="py-24 px-4 max-w-7xl mx-auto">
-
-        <div class="grid md:grid-cols-2 gap-16 items-center">
-
-            <div>
-
-                <span class="text-amber-800 font-semibold uppercase tracking-widest text-sm">Chi Siamo</span>
-
-                <h2 class="text-4xl md:text-5xl font-bold mt-2 mb-6">Giacomo e Giulio: Fratelli, Liberi.</h2>
-
-                <div class="space-y-4 text-lg text-stone-600 leading-relaxed">
-
-                    <p>Siamo nati tra questi castagni. Per noi, il bosco non è solo un luogo di lavoro, è una scelta di vita. Abbiamo scelto di restare dove altri hanno abbandonato, di pulire i terreni incolti e di rimettere in moto gli antichi mulini.</p>
-
-                    <p>La nostra filosofia è semplice: "Castagna Libera". Libera da certificazioni burocratiche soffocanti, libera da pesticidi, pura come l'acqua delle nostre montagne. Siamo due uomini che usano il proprio tempo per fare ciò che amano, e vogliamo condividere questa libertà con voi.</p>
-
-                </div>
-
-                <div class="mt-8 flex items-center space-x-4">
-
-                    <div class="h-16 w-16 rounded-full bg-amber-100 flex items-center justify-center text-amber-800 font-bold">GM</div>
-
-                    <div class="h-16 w-16 rounded-full bg-amber-200 flex items-center justify-center text-amber-900 font-bold">GM</div>
-
-                </div>
-
-            </div>
-
-            <div class="relative">
-
-                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80" alt="Bosco di castagni" class="rounded-2xl shadow-2xl">
-
-                <div class="absolute -bottom-8 -left-8 bg-white p-6 rounded-xl shadow-lg border border-stone-100 hidden lg:block">
-
-                    <p class="text-3xl font-bold text-amber-800">10.000 kg</p>
-
-                    <p class="text-stone-500 text-sm">Farina prodotta annualmente</p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Progetti Section -->
-
-    <section id="progetti" class="py-24 bg-stone-100">
-
-        <div class="max-w-7xl mx-auto px-4">
-
-            <div class="text-center mb-16">
-
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">I Nostri Progetti</h2>
-
-                <p class="text-stone-600 max-w-2xl mx-auto text-lg">Vogliamo recuperare 5000 mq di castagneto abbandonato. Ma non possiamo farlo da soli. Abbiamo bisogno di te per ridare vita a questo tesoro.</p>
-
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-
-                <!-- Adotta un Castagno -->
-
-                <div class="card-wood p-8 rounded-2xl shadow-sm hover:shadow-md transition">
-
-                    <div class="w-12 h-12 bg-amber-800 text-white rounded-lg flex items-center justify-center mb-6">
-
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-
-                    </div>
-
-                    <h3 class="text-2xl font-bold mb-4">Adotta un Castagno</h3>
-
-                    <p class="text-stone-600 mb-6">Finanzia la ripulitura e il recupero di una pianta secolare. Riceverai il tuo sacchetto di farina e potrai venire a trovarlo quando vuoi.</p>
-
-                    <button class="text-amber-800 font-bold flex items-center hover:translate-x-2 transition">Scopri di più <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></button>
-
-                </div>
-
-                <!-- Fattoria Didattica -->
-
-                <div class="card-wood p-8 rounded-2xl shadow-sm hover:shadow-md transition">
-
-                    <div class="w-12 h-12 bg-green-800 text-white rounded-lg flex items-center justify-center mb-6">
-
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-
-                    </div>
-
-                    <h3 class="text-2xl font-bold mb-4">Scuole e Cultura</h3>
-
-                    <p class="text-stone-600 mb-6">Organizziamo giornate nel bosco per le scuole. Portiamo i bambini a vedere come nasce la farina, dal frutto al mulino ad acqua.</p>
-
-                    <button class="text-amber-800 font-bold flex items-center hover:translate-x-2 transition">Prenota visita <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></button>
-
-                </div>
-
-                <!-- Esperienze -->
-
-                <div class="card-wood p-8 rounded-2xl shadow-sm hover:shadow-md transition">
-
-                    <div class="w-12 h-12 bg-stone-800 text-white rounded-lg flex items-center justify-center mb-6">
-
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-
-                    </div>
-
-                    <h3 class="text-2xl font-bold mb-4">Dormire nel Bosco</h3>
-
-                    <p class="text-stone-600 mb-6">Dalle tende scout alle case sull'albero (Treehouses) che stiamo progettando. Vivi il bosco come non l'hai mai fatto prima.</p>
-
-                    <button class="text-amber-800 font-bold flex items-center hover:translate-x-2 transition">Sostieni l'idea <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- La Farina Section -->
-
-    <section id="farina" class="py-24 max-w-7xl mx-auto px-4">
-
-        <div class="bg-amber-900 rounded-[3rem] p-12 md:p-20 text-white flex flex-col md:flex-row items-center gap-12 overflow-hidden relative">
-
-            <div class="absolute top-0 right-0 opacity-10 pointer-events-none">
-
-                <svg width="400" height="400" viewBox="0 0 100 100" fill="currentColor">
-
-                    <path d="M50 0 L100 50 L50 100 L0 50 Z"></path>
-
-                </svg>
-
-            </div>
-
-            <div class="md:w-1/2">
-
-                <h2 class="text-4xl md:text-5xl font-bold mb-8">La nostra farina: Oro Giallo</h2>
-
-                <ul class="space-y-6">
-
-                    <li class="flex items-start">
-
-                        <div class="bg-amber-700 p-1 rounded-full mt-1 mr-4">
-
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-
-                        </div>
-
-                        <div>
-
-                            <p class="font-bold text-xl">Essiccata lentamente nel metato</p>
-
-                            <p class="text-amber-200">Usiamo il fumo di legna di castagno, come si faceva 100 anni fa.</p>
-
-                        </div>
-
-                    </li>
-
-                    <li class="flex items-start">
-
-                        <div class="bg-amber-700 p-1 rounded-full mt-1 mr-4">
-
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-
-                        </div>
-
-                        <div>
-
-                            <p class="font-bold text-xl">Macinata a pietra</p>
-
-                            <p class="text-amber-200">Nel nostro mulino ad acqua, per preservare profumo e proprietà.</p>
-
-                        </div>
-
-                    </li>
-
-                    <li class="flex items-start">
-
-                        <div class="bg-amber-700 p-1 rounded-full mt-1 mr-4">
-
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-
-                        </div>
-
-                        <div>
-
-                            <p class="font-bold text-xl">100% Naturale</p>
-
-                            <p class="text-amber-200">Niente trucchi, niente chimica. Solo castagne e passione.</p>
-
-                        </div>
-
-                    </li>
-
-                </ul>
-
-            </div>
-
-            <div class="md:w-1/2 flex justify-center">
-
-                <div class="bg-white/10 p-4 rounded-3xl backdrop-blur-sm border border-white/20">
-
-                    <img src="https://images.unsplash.com/photo-1590333746433-983050270b28?auto=format&fit=crop&w=600&q=80" alt="Farina di castagne" class="rounded-2xl shadow-lg w-full max-w-sm">
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Donation/Contact Section -->
-
-    <section id="contatti" class="py-24 bg-stone-900 text-white">
-
-        <div class="max-w-5xl mx-auto px-4 text-center">
-
-            <h2 class="text-4xl md:text-5xl font-bold mb-8">Partecipa alla Rinascita</h2>
-
-            <p class="text-xl text-stone-400 mb-12 italic">"Il momento migliore per piantare un albero era 20 anni fa. Il secondo momento migliore è adesso."</p>
-
-            
-
-            <div class="grid md:grid-cols-2 gap-8 mb-16 text-left">
-
-                <div class="bg-stone-800 p-8 rounded-2xl border border-stone-700">
-
-                    <h3 class="text-2xl font-bold mb-4">Fai una Donazione</h3>
-
-                    <p class="text-stone-400 mb-6">Ogni euro viene reinvestito nell'acquisto di nuovi attrezzi e nel recupero di terreni abbandonati.</p>
-
-                    <a href="#" class="block w-full text-center bg-amber-700 hover:bg-amber-800 py-3 rounded-lg font-bold transition">Dona Ora</a>
-
-                </div>
-
-                <div class="bg-stone-800 p-8 rounded-2xl border border-stone-700">
-
-                    <h3 class="text-2xl font-bold mb-4">Scrivici un Messaggio</h3>
-
-                    <p class="text-stone-400 mb-6">Vuoi ordinare la farina o venire a trovarci? Mandaci un segnale!</p>
-
-                    <a href="mailto:info@fratellimaltagliati.it" class="block w-full text-center border border-stone-600 hover:bg-stone-700 py-3 rounded-lg font-bold transition">Invia Email</a>
-
-                </div>
-
-            </div>
-
-            <div class="text-stone-500 text-sm">
-
-                <p>&copy; 2026 Fratelli Maltagliati - Azienda Agricola. Tutti i diritti riservati.</p>
-
-                <p class="mt-2">Pescia (PT), Italia</p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Floating UI for Mobile Call to Action -->
-
-    <div class="md:hidden fixed bottom-6 left-6 right-6 z-50">
-
-        <a href="#contatti" class="block w-full text-center bg-amber-800 text-white font-bold py-4 rounded-full shadow-2xl">
-
-            Sostieni il Progetto
-
-        </a>
-
-    </div>
-
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE</span><span class="s2"> html</span><span class="s1">&gt;</span></p>
+<p class="p1"><span class="s3">&lt;</span><span class="s1">html</span><span class="s4"> </span><span class="s2">lang</span><span class="s3">=</span><span class="s5">"it"</span><span class="s3">&gt;</span></p>
+<p class="p1"><span class="s3">&lt;</span><span class="s1">head</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s1">charset</span><span class="s3">=</span><span class="s5">"UTF-8"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s2">name</span><span class="s3">=</span><span class="s1">"viewport"</span><span class="s4"> </span><span class="s2">content</span><span class="s3">=</span><span class="s1">"width=device-width, initial-scale=1.0"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">title</span><span class="s3">&gt;</span><span class="s1">Fratelli Maltagliati - Castagni, Farina e Libertà</span><span class="s3">&lt;/</span><span class="s6">title</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">script</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://cdn.tailwindcss.com"</span><span class="s3">&gt;&lt;/</span><span class="s6">script</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">link</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&amp;family=Inter:wght@300;400;600&amp;display=swap"</span><span class="s4"> </span><span class="s2">rel</span><span class="s3">=</span><span class="s1">"stylesheet"</span><span class="s3">&gt;</span></p>
+<p class="p1"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">style</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">body</span><span class="s1"> </span><span class="s7">{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-family:</span><span class="s1"> </span><span class="s8">'Inter'</span><span class="s7">,</span><span class="s1"> </span><span class="s5">sans-serif</span><span class="s7">;</span></p>
+<p class="p2"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">scroll-behavior:</span><span class="s4"> </span><span class="s5">smooth</span><span class="s7">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">h1</span><span class="s7">,</span><span class="s1"> </span><span class="s6">h2</span><span class="s7">,</span><span class="s1"> </span><span class="s6">h3</span><span class="s1"> </span><span class="s7">{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-family:</span><span class="s1"> </span><span class="s8">'Crimson Pro'</span><span class="s7">,</span><span class="s1"> </span><span class="s5">serif</span><span class="s7">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
+<p class="p1"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.hero-gradient</span><span class="s4"> </span><span class="s7">{</span></p>
+<p class="p5"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">background:</span><span class="s4"> </span><span class="s5">linear-gradient(rgba(</span><span class="s9">0</span><span class="s7">,</span><span class="s9">0</span><span class="s7">,</span><span class="s9">0</span><span class="s7">,</span><span class="s9">0.4</span><span class="s5">)</span><span class="s7">,</span><span class="s4"> </span><span class="s5">rgba(</span><span class="s9">0</span><span class="s7">,</span><span class="s9">0</span><span class="s7">,</span><span class="s9">0</span><span class="s7">,</span><span class="s9">0.4</span><span class="s5">))</span><span class="s7">,</span><span class="s4"> </span><span class="s5">url</span><span class="s7">(</span><span class="s1">'https://images.unsplash.com/photo-1508349177119-83c02a71f2b8?auto=format&amp;fit=crop&amp;w=1920&amp;q=80'</span><span class="s7">);</span></p>
+<p class="p2"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">background-size:</span><span class="s4"> </span><span class="s5">cover</span><span class="s7">;</span></p>
+<p class="p2"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">background-position:</span><span class="s4"> </span><span class="s5">center</span><span class="s7">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
+<p class="p1"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.card-wood</span><span class="s4"> </span><span class="s7">{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background-color:</span><span class="s1"> #fdfaf7</span><span class="s7">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border:</span><span class="s1"> </span><span class="s9">1px</span><span class="s1"> </span><span class="s5">solid</span><span class="s1"> #e5d5c5</span><span class="s7">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
+<p class="p1"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">style</span><span class="s3">&gt;</span></p>
+<p class="p1"><span class="s3">&lt;/</span><span class="s1">head</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s3">&lt;</span><span class="s6">body</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-[#faf7f2] text-stone-800"</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s10"></span><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Navigation --&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">nav</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"fixed w-full z-50 bg-[#faf7f2]/90 backdrop-blur-sm border-b border-stone-200"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex justify-between h-20 items-center"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-2xl font-bold text-amber-900 tracking-tight"</span><span class="s3">&gt;</span><span class="s4">FRATELLI MALTAGLIATI</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hidden md:flex space-x-8 font-medium text-sm uppercase tracking-widest text-stone-600"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#storia"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:text-amber-700 transition"</span><span class="s3">&gt;</span><span class="s4">La Storia</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#progetti"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:text-amber-700 transition"</span><span class="s3">&gt;</span><span class="s4">Progetti</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#farina"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:text-amber-700 transition"</span><span class="s3">&gt;</span><span class="s4">La Farina</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#contatti"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-amber-800 text-white px-5 py-2 rounded-full hover:bg-amber-900 transition"</span><span class="s3">&gt;</span><span class="s4">Adotta un Castagno</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s6">nav</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s10"></span><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Hero Section --&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"relative h-screen flex items-center justify-center hero-gradient text-white pt-20"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-center px-4 max-w-4xl"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">h1</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-5xl md:text-7xl font-bold mb-6"</span><span class="s3">&gt;</span><span class="s1">Custodi dei Boschi e del Tempo</span><span class="s3">&lt;/</span><span class="s6">h1</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xl md:text-2xl mb-10 font-light opacity-90 italic"</span><span class="s3">&gt;</span><span class="s1">"Non vendiamo solo farina, vendiamo la nostra storia e il rispetto per la terra."</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex flex-col sm:flex-row gap-4 justify-center"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#progetti"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-amber-700 hover:bg-amber-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition shadow-xl"</span><span class="s3">&gt;</span><span class="s4">Scopri il Progetto</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#farina"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-lg font-semibold text-lg transition"</span><span class="s3">&gt;</span><span class="s4">La nostra Farina</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-6 h-6"</span><span class="s4"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"none"</span><span class="s4"> </span><span class="s2">stroke</span><span class="s3">=</span><span class="s1">"currentColor"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">stroke-linecap</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-linejoin</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-width</span><span class="s3">=</span><span class="s1">"2"</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M19 14l-7 7m0 0l-7-7m7 7V3"</span><span class="s3">&gt;&lt;/</span><span class="s6">path</span><span class="s3">&gt;&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p1"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">section</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s10"></span><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- La Storia Section --&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"storia"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"py-24 px-4 max-w-7xl mx-auto"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid md:grid-cols-2 gap-16 items-center"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-amber-800 font-semibold uppercase tracking-widest text-sm"</span><span class="s3">&gt;</span><span class="s4">Chi Siamo</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-4xl md:text-5xl font-bold mt-2 mb-6"</span><span class="s3">&gt;</span><span class="s1">Giacomo e Giulio: Fratelli, Liberi.</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"space-y-4 text-lg text-stone-600 leading-relaxed"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s3">&gt;</span><span class="s1">Siamo nati tra questi castagni. Per noi, il bosco non è solo un luogo di lavoro, è una scelta di vita. Abbiamo scelto di restare dove altri hanno abbandonato, di pulire i terreni incolti e di rimettere in moto gli antichi mulini.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s3">&gt;</span><span class="s1">La nostra filosofia è semplice: "Castagna Libera". Libera da certificazioni burocratiche soffocanti, libera da pesticidi, pura come l'acqua delle nostre montagne. Siamo due uomini che usano il proprio tempo per fare ciò che amano, e vogliamo condividere questa libertà con voi.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"mt-8 flex items-center space-x-4"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"h-16 w-16 rounded-full bg-amber-100 flex items-center justify-center text-amber-800 font-bold"</span><span class="s3">&gt;</span><span class="s4">GM</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"h-16 w-16 rounded-full bg-amber-200 flex items-center justify-center text-amber-900 font-bold"</span><span class="s3">&gt;</span><span class="s4">GM</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"relative"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&amp;fit=crop&amp;w=800&amp;q=80"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"Bosco di castagni"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"rounded-2xl shadow-2xl"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"absolute -bottom-8 -left-8 bg-white p-6 rounded-xl shadow-lg border border-stone-100 hidden lg:block"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-3xl font-bold text-amber-800"</span><span class="s3">&gt;</span><span class="s4">10.000 kg</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-stone-500 text-sm"</span><span class="s3">&gt;</span><span class="s1">Farina prodotta annualmente</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p1"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">section</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s10"></span><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Progetti Section --&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"progetti"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"py-24 bg-stone-100"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"max-w-7xl mx-auto px-4"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-center mb-16"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-4xl md:text-5xl font-bold mb-4"</span><span class="s3">&gt;</span><span class="s4">I Nostri Progetti</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-stone-600 max-w-2xl mx-auto text-lg"</span><span class="s3">&gt;</span><span class="s1">Vogliamo recuperare 5000 mq di castagneto abbandonato. Ma non possiamo farlo da soli. Abbiamo bisogno di te per ridare vita a questo tesoro.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s10"></span><br></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid md:grid-cols-3 gap-8"</span><span class="s3">&gt;</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Adotta un Castagno --&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"card-wood p-8 rounded-2xl shadow-sm hover:shadow-md transition"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-12 h-12 bg-amber-800 text-white rounded-lg flex items-center justify-center mb-6"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-6 h-6"</span><span class="s4"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"none"</span><span class="s4"> </span><span class="s2">stroke</span><span class="s3">=</span><span class="s1">"currentColor"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">stroke-linecap</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-linejoin</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-width</span><span class="s3">=</span><span class="s1">"2"</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"</span><span class="s3">&gt;&lt;/</span><span class="s6">path</span><span class="s3">&gt;&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-2xl font-bold mb-4"</span><span class="s3">&gt;</span><span class="s1">Adotta un Castagno</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-stone-600 mb-6"</span><span class="s3">&gt;</span><span class="s1">Finanzia la ripulitura e il recupero di una pianta secolare. Riceverai il tuo sacchetto di farina e potrai venire a trovarlo quando vuoi.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-amber-800 font-bold flex items-center hover:translate-x-2 transition"</span><span class="s3">&gt;</span><span class="s4">Scopri di più </span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-4 h-4 ml-2"</span><span class="s4"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"none"</span><span class="s4"> </span><span class="s2">stroke</span><span class="s3">=</span><span class="s1">"currentColor"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">stroke-linecap</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-linejoin</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-width</span><span class="s3">=</span><span class="s1">"2"</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M9 5l7 7-7 7"</span><span class="s3">&gt;&lt;/</span><span class="s6">path</span><span class="s3">&gt;&lt;/</span><span class="s6">svg</span><span class="s3">&gt;&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s10"></span><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Fattoria Didattica --&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"card-wood p-8 rounded-2xl shadow-sm hover:shadow-md transition"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-12 h-12 bg-green-800 text-white rounded-lg flex items-center justify-center mb-6"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-6 h-6"</span><span class="s4"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"none"</span><span class="s4"> </span><span class="s2">stroke</span><span class="s3">=</span><span class="s1">"currentColor"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">stroke-linecap</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-linejoin</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-width</span><span class="s3">=</span><span class="s1">"2"</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"</span><span class="s3">&gt;&lt;/</span><span class="s6">path</span><span class="s3">&gt;&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-2xl font-bold mb-4"</span><span class="s3">&gt;</span><span class="s1">Scuole e Cultura</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-stone-600 mb-6"</span><span class="s3">&gt;</span><span class="s1">Organizziamo giornate nel bosco per le scuole. Portiamo i bambini a vedere come nasce la farina, dal frutto al mulino ad acqua.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-amber-800 font-bold flex items-center hover:translate-x-2 transition"</span><span class="s3">&gt;</span><span class="s4">Prenota visita </span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-4 h-4 ml-2"</span><span class="s4"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"none"</span><span class="s4"> </span><span class="s2">stroke</span><span class="s3">=</span><span class="s1">"currentColor"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">stroke-linecap</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-linejoin</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-width</span><span class="s3">=</span><span class="s1">"2"</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M9 5l7 7-7 7"</span><span class="s3">&gt;&lt;/</span><span class="s6">path</span><span class="s3">&gt;&lt;/</span><span class="s6">svg</span><span class="s3">&gt;&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s10"></span><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Esperienze --&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"card-wood p-8 rounded-2xl shadow-sm hover:shadow-md transition"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-12 h-12 bg-stone-800 text-white rounded-lg flex items-center justify-center mb-6"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-6 h-6"</span><span class="s4"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"none"</span><span class="s4"> </span><span class="s2">stroke</span><span class="s3">=</span><span class="s1">"currentColor"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">stroke-linecap</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-linejoin</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-width</span><span class="s3">=</span><span class="s1">"2"</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"</span><span class="s3">&gt;&lt;/</span><span class="s6">path</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">stroke-linecap</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-linejoin</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-width</span><span class="s3">=</span><span class="s1">"2"</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M15 11a3 3 0 11-6 0 3 3 0 016 0z"</span><span class="s3">&gt;&lt;/</span><span class="s6">path</span><span class="s3">&gt;&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-2xl font-bold mb-4"</span><span class="s3">&gt;</span><span class="s1">Dormire nel Bosco</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-stone-600 mb-6"</span><span class="s3">&gt;</span><span class="s1">Dalle tende scout alle case sull'albero (Treehouses) che stiamo progettando. Vivi il bosco come non l'hai mai fatto prima.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-amber-800 font-bold flex items-center hover:translate-x-2 transition"</span><span class="s3">&gt;</span><span class="s4">Sostieni l'idea </span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-4 h-4 ml-2"</span><span class="s4"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"none"</span><span class="s4"> </span><span class="s2">stroke</span><span class="s3">=</span><span class="s1">"currentColor"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">stroke-linecap</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-linejoin</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-width</span><span class="s3">=</span><span class="s1">"2"</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M9 5l7 7-7 7"</span><span class="s3">&gt;&lt;/</span><span class="s6">path</span><span class="s3">&gt;&lt;/</span><span class="s6">svg</span><span class="s3">&gt;&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p1"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">section</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s10"></span><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- La Farina Section --&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"farina"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"py-24 max-w-7xl mx-auto px-4"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-amber-900 rounded-[3rem] p-12 md:p-20 text-white flex flex-col md:flex-row items-center gap-12 overflow-hidden relative"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"absolute top-0 right-0 opacity-10 pointer-events-none"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">width</span><span class="s3">=</span><span class="s1">"400"</span><span class="s4"> </span><span class="s2">height</span><span class="s3">=</span><span class="s1">"400"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 100 100"</span><span class="s4"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"currentColor"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M50 0 L100 50 L50 100 L0 50 Z"</span><span class="s3">&gt;&lt;/</span><span class="s6">path</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"md:w-1/2"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-4xl md:text-5xl font-bold mb-8"</span><span class="s3">&gt;</span><span class="s1">La nostra farina: Oro Giallo</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">ul</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"space-y-6"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"flex items-start"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-amber-700 p-1 rounded-full mt-1 mr-4"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-4 h-4"</span><span class="s4"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"currentColor"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 20 20"</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">fill-rule</span><span class="s3">=</span><span class="s1">"evenodd"</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"</span><span class="s4"> </span><span class="s2">clip-rule</span><span class="s3">=</span><span class="s1">"evenodd"</span><span class="s3">&gt;&lt;/</span><span class="s6">path</span><span class="s3">&gt;&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"font-bold text-xl"</span><span class="s3">&gt;</span><span class="s1">Essiccata lentamente nel metato</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-amber-200"</span><span class="s3">&gt;</span><span class="s1">Usiamo il fumo di legna di castagno, come si faceva 100 anni fa.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"flex items-start"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-amber-700 p-1 rounded-full mt-1 mr-4"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-4 h-4"</span><span class="s4"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"currentColor"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 20 20"</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">fill-rule</span><span class="s3">=</span><span class="s1">"evenodd"</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"</span><span class="s4"> </span><span class="s2">clip-rule</span><span class="s3">=</span><span class="s1">"evenodd"</span><span class="s3">&gt;&lt;/</span><span class="s6">path</span><span class="s3">&gt;&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"font-bold text-xl"</span><span class="s3">&gt;</span><span class="s1">Macinata a pietra</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-amber-200"</span><span class="s3">&gt;</span><span class="s1">Nel nostro mulino ad acqua, per preservare profumo e proprietà.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">li</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"flex items-start"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-amber-700 p-1 rounded-full mt-1 mr-4"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-4 h-4"</span><span class="s4"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"currentColor"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 20 20"</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">fill-rule</span><span class="s3">=</span><span class="s1">"evenodd"</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"</span><span class="s4"> </span><span class="s2">clip-rule</span><span class="s3">=</span><span class="s1">"evenodd"</span><span class="s3">&gt;&lt;/</span><span class="s6">path</span><span class="s3">&gt;&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"font-bold text-xl"</span><span class="s3">&gt;</span><span class="s1">100% Naturale</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-amber-200"</span><span class="s3">&gt;</span><span class="s1">Niente trucchi, niente chimica. Solo castagne e passione.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">li</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">ul</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"md:w-1/2 flex justify-center"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white/10 p-4 rounded-3xl backdrop-blur-sm border border-white/20"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://images.unsplash.com/photo-1590333746433-983050270b28?auto=format&amp;fit=crop&amp;w=600&amp;q=80"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"Farina di castagne"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"rounded-2xl shadow-lg w-full max-w-sm"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p1"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">section</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s10"></span><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Donation/Contact Section --&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"contatti"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"py-24 bg-stone-900 text-white"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"max-w-5xl mx-auto px-4 text-center"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-4xl md:text-5xl font-bold mb-8"</span><span class="s3">&gt;</span><span class="s1">Partecipa alla Rinascita</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xl text-stone-400 mb-12 italic"</span><span class="s3">&gt;</span><span class="s1">"Il momento migliore per piantare un albero era 20 anni fa. Il secondo momento migliore è adesso."</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid md:grid-cols-2 gap-8 mb-16 text-left"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-stone-800 p-8 rounded-2xl border border-stone-700"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-2xl font-bold mb-4"</span><span class="s3">&gt;</span><span class="s1">Fai una Donazione</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-stone-400 mb-6"</span><span class="s3">&gt;</span><span class="s1">Ogni euro viene reinvestito nell'acquisto di nuovi attrezzi e nel recupero di terreni abbandonati.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"block w-full text-center bg-amber-700 hover:bg-amber-800 py-3 rounded-lg font-bold transition"</span><span class="s3">&gt;</span><span class="s4">Dona Ora</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-stone-800 p-8 rounded-2xl border border-stone-700"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-2xl font-bold mb-4"</span><span class="s3">&gt;</span><span class="s1">Scrivici un Messaggio</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-stone-400 mb-6"</span><span class="s3">&gt;</span><span class="s1">Vuoi ordinare la farina o venire a trovarci? Mandaci un segnale!</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"mailto:info@fratellimaltagliati.it"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"block w-full text-center border border-stone-600 hover:bg-stone-700 py-3 rounded-lg font-bold transition"</span><span class="s3">&gt;</span><span class="s4">Invia Email</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s10"></span><br></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-stone-500 text-sm"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s3">&gt;</span><span class="s1">&amp;copy; 2026 Fratelli Maltagliati - Azienda Agricola. Tutti i diritti riservati.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"mt-2"</span><span class="s3">&gt;</span><span class="s1">Pescia (PT), Italia</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p1"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">section</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s10"></span><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Floating UI for Mobile Call to Action --&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"md:hidden fixed bottom-6 left-6 right-6 z-50"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#contatti"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"block w-full text-center bg-amber-800 text-white font-bold py-4 rounded-full shadow-2xl"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>Sostieni il Progetto</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p6"><span class="s10"></span><br></p>
+<p class="p1"><span class="s3">&lt;/</span><span class="s1">body</span><span class="s3">&gt;</span></p>
+<p class="p1"><span class="s3">&lt;/</span><span class="s1">html</span><span class="s3">&gt;</span></p>
 </body>
-
 </html>
