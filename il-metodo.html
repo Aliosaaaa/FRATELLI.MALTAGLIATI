@@ -108,7 +108,7 @@
 <a class="text-[#5C3A21] hover:text-[#42240D] hover:scale-105 transition-transform duration-300" href="il-progetto.html">Il Progetto</a>
 <a class="text-[#5C3A21] hover:text-[#42240D] hover:scale-105 transition-transform duration-300" href="prodotti.html">Prodotti</a>
 </div>
-<button class="hidden md:inline-flex bg-[#42240D] text-white px-6 py-2 rounded-md font-medium hover:scale-105 transition-transform duration-300">Contattaci</button>
+<a href="https://wa.me/393338260740" target="_blank" rel="noopener" class="hidden md:inline-flex bg-[#42240D] text-white px-6 py-2 rounded-md font-medium hover:scale-105 transition-transform duration-300 items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.4A11.94 11.94 0 0012 0C5.4 0 .1 5.3.1 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.4-1.7a11.92 11.92 0 005.6 1.4h.01c6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.4-8.4z"/></svg>Contattaci</a>
 </div>
 <a href="il-progetto.html#dona" class="hidden md:inline-flex items-center gap-2 bg-tertiary text-white font-medium px-5 py-2.5 rounded-md shadow-md hover:scale-105 hover:shadow-lg transition-all whitespace-nowrap" style="background:linear-gradient(135deg,#C26A2E 0%,#4B1F00 100%);"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>Dona</a></nav>
 <main class="relative">
@@ -133,7 +133,7 @@
 <div class="absolute -bottom-6 -left-6 w-48 h-48 bg-secondary-container rounded-full -z-10 opacity-50 blur-3xl"></div>
 </div>
 </div>
-
+</header>
 <button id="mobile-menu-toggle" type="button"
         aria-label="Apri menu" aria-expanded="false" aria-controls="mobile-drawer"
         class="md:hidden fixed top-5 right-4 z-[60] w-12 h-12 rounded-full bg-primary text-white shadow-xl flex items-center justify-center hover:scale-105 transition-transform">
@@ -182,33 +182,41 @@
 
 <script>
   (function(){
-    var btn = document.getElementById('mobile-menu-toggle');
-    var drawer = document.getElementById('mobile-drawer');
-    var backdrop = document.getElementById('mobile-drawer-backdrop');
-    var iconOpen = document.getElementById('mobile-menu-icon-open');
-    var iconClose = document.getElementById('mobile-menu-icon-close');
-    if (!btn || !drawer) return;
-    function setOpen(open){
-      drawer.classList.toggle('hidden', !open);
-      drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      iconOpen.classList.toggle('hidden', open);
-      iconClose.classList.toggle('hidden', !open);
-      document.body.style.overflow = open ? 'hidden' : '';
+    function init(){
+      var btn = document.getElementById('mobile-menu-toggle');
+      var drawer = document.getElementById('mobile-drawer');
+      if (!btn || !drawer) return;
+      var backdrop = document.getElementById('mobile-drawer-backdrop');
+      var iconOpen = document.getElementById('mobile-menu-icon-open');
+      var iconClose = document.getElementById('mobile-menu-icon-close');
+      function setOpen(open){
+        drawer.classList.toggle('hidden', !open);
+        drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (iconOpen)  iconOpen.classList.toggle('hidden', open);
+        if (iconClose) iconClose.classList.toggle('hidden', !open);
+        document.body.style.overflow = open ? 'hidden' : '';
+      }
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        setOpen(drawer.classList.contains('hidden'));
+      });
+      if (backdrop) backdrop.addEventListener('click', function(){ setOpen(false); });
+      drawer.querySelectorAll('a').forEach(function(a){
+        a.addEventListener('click', function(){ setOpen(false); });
+      });
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape') setOpen(false);
+      });
     }
-    btn.addEventListener('click', function(){
-      setOpen(drawer.classList.contains('hidden'));
-    });
-    backdrop && backdrop.addEventListener('click', function(){ setOpen(false); });
-    drawer.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click', function(){ setOpen(false); });
-    });
-    document.addEventListener('keydown', function(e){
-      if (e.key === 'Escape') setOpen(false);
-    });
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
   })();
 </script>
-</header>
+
 <!-- Section 1: Dal bosco al metato -->
 <section class="py-24 bg-surface-container-low">
 <div class="max-w-7xl mx-auto px-8">
@@ -451,8 +459,8 @@
 </div>
 <div class="flex flex-col md:flex-row gap-6 justify-center">
 <a class="text-[#5C3A21] hover:text-[#456553] transition-colors" href="https://wa.me/393338260740" target="_blank" rel="noopener">WhatsApp</a>
-<a class="text-[#5C3A21] hover:text-[#456553] transition-colors" href="#">Privacy Policy</a>
-<a class="text-[#5C3A21] hover:text-[#456553] transition-colors" href="#">Termini di Servizio</a>
+<a class="text-[#5C3A21] hover:text-[#456553] transition-colors" href="#" onclick="event.preventDefault();" title="In arrivo">Privacy Policy</a>
+<a class="text-[#5C3A21] hover:text-[#456553] transition-colors" href="#" onclick="event.preventDefault();" title="In arrivo">Termini di Servizio</a>
 </div>
 <div class="md:text-right opacity-80">
                 © 2024 Castagne Libere - Tradizione e Rispetto per la Terra.
