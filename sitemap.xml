@@ -1,8 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/</loc></url>
-  <url><loc>https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/chi-siamo.html</loc></url>
-  <url><loc>https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/il-metodo.html</loc></url>
-  <url><loc>https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/il-progetto.html</loc></url>
-  <url><loc>https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/prodotti.html</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/de/index.html"/>
+  </url>
+  <url>
+    <loc>https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/en/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/de/index.html"/>
+  </url>
+  <url>
+    <loc>https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/de/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/de/index.html"/>
+  </url>
+  <url>
+    <loc>https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/chi-siamo.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/chi-siamo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/en/chi-siamo.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/de/chi-siamo.html"/>
+  </url>
+  <url>
+    <loc>https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/en/chi-siamo.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/chi-siamo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/en/chi-siamo.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/de/chi-siamo.html"/>
+  </url>
+  <url>
+    <loc>https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/de/chi-siamo.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/chi-siamo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/en/chi-siamo.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/de/chi-siamo.html"/>
+  </url>
+  <url>
+    <loc>https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/il-metodo.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/il-metodo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/en/il-metodo.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/de/il-metodo.html"/>
+  </url>
+  <url>
+    <loc>https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/en/il-metodo.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/il-metodo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/en/il-metodo.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/de/il-metodo.html"/>
+  </url>
+  <url>
+    <loc>https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/de/il-metodo.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/il-metodo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/en/il-metodo.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/de/il-metodo.html"/>
+  </url>
+  <url>
+    <loc>https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/il-progetto.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/il-progetto.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/en/il-progetto.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/de/il-progetto.html"/>
+  </url>
+  <url>
+    <loc>https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/en/il-progetto.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/il-progetto.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/en/il-progetto.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/de/il-progetto.html"/>
+  </url>
+  <url>
+    <loc>https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/de/il-progetto.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/il-progetto.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/en/il-progetto.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/de/il-progetto.html"/>
+  </url>
+  <url>
+    <loc>https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/prodotti.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/prodotti.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/en/prodotti.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/de/prodotti.html"/>
+  </url>
+  <url>
+    <loc>https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/en/prodotti.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/prodotti.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/en/prodotti.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/de/prodotti.html"/>
+  </url>
+  <url>
+    <loc>https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/de/prodotti.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/prodotti.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/en/prodotti.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/de/prodotti.html"/>
+  </url>
 </urlset>
