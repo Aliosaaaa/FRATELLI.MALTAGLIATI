@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aliosaaaa.github.io/FRATELLI.MALTAGLIATI/sitemap.xml

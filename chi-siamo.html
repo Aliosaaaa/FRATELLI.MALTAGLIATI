@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html class="light" lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed": "#c7ebd4",
+                    "on-secondary-fixed-variant": "#2d4d3c",
+                    "surface-container-low": "#fff2d9",
+                    "on-tertiary-fixed": "#321200",
+                    "secondary-fixed-dim": "#abcfb9",
+                    "on-primary": "#ffffff",
+                    "on-surface": "#211b0c",
+                    "inverse-primary": "#efbc9b",
+                    "tertiary": "#4b1f00",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed": "#ffdbc8",
+                    "on-background": "#211b0c",
+                    "tertiary-fixed-dim": "#ffb68b",
+                    "secondary-container": "#c4e8d1",
+                    "surface-container": "#f9edd3",
+                    "tertiary-container": "#6d3000",
+                    "primary-fixed-dim": "#efbc9b",
+                    "inverse-on-surface": "#fcf0d6",
+                    "outline-variant": "#d4c3b9",
+                    "on-tertiary-container": "#f89555",
+                    "surface": "#fff8f1",
+                    "on-tertiary-fixed-variant": "#753400",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#7c563b",
+                    "primary": "#42240d",
+                    "surface-bright": "#fff8f1",
+                    "on-secondary-fixed": "#002113",
+                    "surface-variant": "#ede1c8",
+                    "primary-container": "#5c3a21",
+                    "on-primary-fixed": "#2f1502",
+                    "secondary": "#456553",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#623f25",
+                    "on-primary-container": "#d4a484",
+                    "on-secondary-container": "#496a57",
+                    "outline": "#82746c",
+                    "on-surface-variant": "#50443d",
+                    "primary-fixed": "#ffdcc6",
+                    "inverse-surface": "#36301f",
+                    "surface-container-highest": "#ede1c8",
+                    "background": "#fff8f1",
+                    "surface-container-high": "#f3e7ce",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#e5d9c0",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Work Sans"],
+                    "label": ["Work Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>.paper-grain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.04;
+    background-image: url(assets/img/vista-borgo-cima.jpg)
+    }
+.hero-gradient {
+    background: linear-gradient(to bottom, rgba(66, 36, 13, 0.4), rgba(66, 36, 13, 0.1))
+    }</style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<div class="paper-grain"></div>
+<!-- Top Navigation Shell -->
+<header class="bg-[#fff8f1]/90 backdrop-blur-md fixed top-0 z-50 w-full shadow-sm">
+<nav class="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto">
+<div class="font-noto-serif text-2xl font-bold text-[#42240D] tracking-tighter">
+                Castagne Libere
+            </div>
+<div class="hidden md:flex gap-8 items-center font-noto-serif text-lg tracking-tight">
+<a class="text-[#5C3A21] hover:text-[#42240D] hover:scale-105 transition-transform duration-300" href="index.html">Homepage</a>
+<a class="text-[#42240D] font-bold border-b-2 border-[#C26A2E] pb-1 hover:scale-105 transition-transform duration-300" href="chi-siamo.html">Chi Siamo</a>
+<a class="text-[#5C3A21] hover:text-[#42240D] hover:scale-105 transition-transform duration-300" href="il-metodo.html">Il Metodo</a>
+<a class="text-[#5C3A21] hover:text-[#42240D] hover:scale-105 transition-transform duration-300" href="il-progetto.html">Il Progetto</a>
+<a class="text-[#5C3A21] hover:text-[#42240D] hover:scale-105 transition-transform duration-300" href="prodotti.html">Prodotti</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-md font-medium hover:scale-105 transition-transform duration-300 active:scale-95">
+                Contattaci
+            </button>
+</nav>
+</header>
+<main class="pt-24">
+<!-- Editorial Hero Section -->
+<section class="relative min-h-[819px] flex items-center overflow-hidden bg-surface-container-low px-8">
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-7 z-10">
+<span class="font-label text-secondary uppercase tracking-[0.3em] text-sm mb-6 block">Le Radici del Progetto</span>
+<h1 class="font-headline text-5xl md:text-7xl text-primary leading-tight tracking-tighter mb-8 italic">
+                        Liberi nel bosco, <br/>
+<span class="not-italic">custodi di una tradizione.</span>
+</h1>
+<p class="font-body text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                        Non siamo commercianti. Siamo i figli di queste terre che hanno scelto la fatica del silenzio al rumore delle città.
+                    </p>
+</div>
+<div class="md:col-span-5 relative h-full flex justify-end">
+<div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden shadow-xl transform rotate-2">
+<img alt="Giacomo verifica le castagne nel metato" class="w-full h-full object-cover" src="assets/img/essiccazione.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+</div>
+<!-- Overlapping Heritage Badge -->
+<div class="absolute -bottom-6 -left-6 bg-tertiary-fixed text-on-tertiary-fixed-variant p-8 rounded-[30%_70%_70%_30%_/_30%_30%_70%_70%] shadow-lg max-w-[200px] text-center z-20 transform -rotate-3">
+<span class="font-headline italic text-lg leading-tight">Tradizione Autentica</span>
+</div>
+</div>
+</div>
+</section>
+<!-- The Story: Asymmetrical Layout -->
+<section class="py-24 px-8 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+<div class="space-y-12">
+<div class="space-y-6">
+<h2 class="font-headline text-3xl text-primary">Giacomo e Giulio</h2>
+<p class="text-lg leading-relaxed text-on-surface-variant">
+                                La nostra storia non nasce da un business plan, ma da un rifiuto. Il rifiuto delle logiche industriali che trasformano il bosco in una catena di montaggio. Quando abbiamo preso in mano i castagneti di famiglia, molti ci hanno dato dei folli.
+                            </p>
+</div>
+<!-- Floating Quote Card -->
+<div class="bg-surface-container-highest p-12 rounded-xl relative shadow-sm">
+<span class="material-symbols-outlined text-tertiary absolute top-8 left-8 opacity-20 text-6xl">format_quote</span>
+<p class="font-headline italic text-2xl text-primary relative z-10 leading-snug">
+                                "Abbiamo imparato che la terra non ti aspetta. Se il trattorino si rompe a mezzanotte sotto la pioggia, lo ripari lì, con le mani sporche e il fiato corto, perché domani è tempo di raccolta."
+                            </p>
+</div>
+</div>
+<div class="md:mt-24 space-y-12">
+<div class="aspect-square bg-surface-container rounded-xl overflow-hidden shadow-inner group">
+<img alt="Vista aerea del borgo e del castagneto recuperato" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="assets/img/borgo-aereo.jpg"/>
+</div>
+<div class="space-y-6">
+<p class="text-lg leading-relaxed text-on-surface-variant">
+                                La nostra è una fatica estrema. È il lavoro fino a quando il buio non inghiotte gli alberi e restano solo le torce a guidare le mani. Non cerchiamo scorciatoie: ogni castagna che mangiate è passata attraverso i nostri calli.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Philosophy Section (The No-Line Tonal Shift) -->
+<section class="bg-surface-container-low py-32 px-8">
+<div class="max-w-4xl mx-auto text-center space-y-12">
+<div class="inline-flex items-center gap-2 px-4 py-1 bg-secondary-container text-on-secondary-container rounded-full text-sm font-label font-semibold tracking-wider">
+<span class="material-symbols-outlined text-base">verified</span>
+                    FILOSOFIA REALE
+                </div>
+<h2 class="font-headline text-5xl text-primary tracking-tight">Purezza nei fatti, <br/><span class="italic font-normal">non nelle etichette.</span></h2>
+<p class="text-xl text-on-surface-variant leading-relaxed max-w-2xl mx-auto font-light">
+                    Abbiamo scelto di non inseguire il "Bio" commerciale. Le certificazioni spesso sono solo burocrazia che si paga. La nostra garanzia è il fango sui nostri stivali e la salute dei nostri alberi secolari. 
+                </p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-12">
+<div class="bg-surface p-8 rounded-xl text-left border-b-4 border-secondary/20">
+<h4 class="font-headline text-xl text-primary mb-2">Senza Chimica</h4>
+<p class="text-sm text-on-surface-variant">Lasciamo che il bosco faccia il bosco. Nessun pesticida, solo equilibrio naturale.</p>
+</div>
+<div class="bg-surface p-8 rounded-xl text-left border-b-4 border-tertiary/20">
+<h4 class="font-headline text-xl text-primary mb-2">Raccolta Manuale</h4>
+<p class="text-sm text-on-surface-variant">Ogni riccio è aperto a mano o con strumenti tradizionali. Rispetto per il frutto.</p>
+</div>
+<div class="bg-surface p-8 rounded-xl text-left border-b-4 border-primary/20">
+<h4 class="font-headline text-xl text-primary mb-2">Trasparenza</h4>
+<p class="text-sm text-on-surface-variant">Chiunque voglia vedere come lavoriamo è il benvenuto nel nostro bosco.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Authentic Visual Gallery (Bento Style) -->
+<section class="py-24 px-8 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[250px]">
+<div class="md:col-span-2 md:row-span-2 rounded-xl overflow-hidden relative group">
+<img alt="Castagne ad essiccare all'interno del metato tradizionale" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" data-alt="Castagne ad essiccare all'interno del metato tradizionale" src="assets/img/metato-interno.jpg"/>
+<div class="absolute bottom-0 left-0 p-8 text-white z-10">
+<span class="font-label text-xs uppercase tracking-widest opacity-80">Ottobre 2023</span>
+<h3 class="font-headline text-2xl">Il picco della raccolta</h3>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+</div>
+<div class="md:col-span-2 rounded-xl overflow-hidden relative">
+<img alt="Vista aerea del borgo e del castagneto recuperato" class="w-full h-full object-cover" src="assets/img/borgo-aereo.jpg"/>
+</div>
+<div class="rounded-xl overflow-hidden bg-secondary-container flex items-center justify-center p-8 text-center">
+<p class="font-headline italic text-on-secondary-container text-xl leading-snug">"Un albero felice fa frutti onesti."</p>
+</div>
+<div class="rounded-xl overflow-hidden relative">
+<img alt="Giacomo verifica le castagne nel metato" class="w-full h-full object-cover" src="assets/img/essiccazione.jpg"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-[#ede1c8] py-12 px-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center max-w-7xl mx-auto text-center md:text-left">
+<div>
+<span class="font-noto-serif italic text-xl text-[#42240D]">Castagne Libere</span>
+<p class="mt-4 font-work-sans text-sm text-[#5C3A21] max-w-xs">
+                    Portiamo l'anima del bosco direttamente sulla tua tavola, con la fierezza di chi non scende a compromessi.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-work-sans text-sm tracking-wide">
+<a class="text-[#5C3A21] hover:text-[#456553] transition-colors" href="https://wa.me/393000000000" target="_blank" rel="noopener">WhatsApp</a>
+<a class="text-[#5C3A21] hover:text-[#456553] transition-colors" href="#">Privacy Policy</a>
+<a class="text-[#5C3A21] hover:text-[#456553] transition-colors" href="#">Termini di Servizio</a>
+</div>
+<div class="md:text-right font-work-sans text-sm text-[#5C3A21]">
+<p>© 2024 Castagne Libere - Tradizione e Rispetto per la Terra.</p>
+</div>
+</div>
+</footer>
+</body></html>
