@@ -105,10 +105,85 @@
 <a class="text-[#5C3A21] hover:text-[#42240D] hover:scale-105 transition-transform duration-300" href="il-progetto.html">Il Progetto</a>
 <a class="text-[#5C3A21] hover:text-[#42240D] hover:scale-105 transition-transform duration-300" href="prodotti.html">Prodotti</a>
 </div>
-<button class="bg-primary text-on-primary px-6 py-2 rounded-md font-medium hover:scale-105 transition-transform duration-300 active:scale-95">
+<button class="hidden md:inline-flex bg-primary text-on-primary px-6 py-2 rounded-md font-medium hover:scale-105 transition-transform duration-300 active:scale-95">
                 Contattaci
             </button>
 <a href="il-progetto.html#dona" class="hidden md:inline-flex items-center gap-2 bg-tertiary text-white font-medium px-5 py-2.5 rounded-md shadow-md hover:scale-105 hover:shadow-lg transition-all whitespace-nowrap" style="background:linear-gradient(135deg,#C26A2E 0%,#4B1F00 100%);"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>Dona</a></nav>
+
+<button id="mobile-menu-toggle" type="button"
+        aria-label="Apri menu" aria-expanded="false" aria-controls="mobile-drawer"
+        class="md:hidden fixed top-5 right-4 z-[60] w-12 h-12 rounded-full bg-primary text-white shadow-xl flex items-center justify-center hover:scale-105 transition-transform">
+  <svg id="mobile-menu-icon-open" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+  <svg id="mobile-menu-icon-close" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+</button>
+
+<div id="mobile-drawer" class="md:hidden fixed inset-0 z-50 hidden" aria-hidden="true">
+  <div id="mobile-drawer-backdrop" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+  <nav class="absolute top-0 right-0 h-full w-[85%] max-w-sm bg-surface shadow-2xl flex flex-col"
+       style="background:linear-gradient(180deg,#fff8f1 0%,#fff2d9 100%);">
+    <div class="px-6 pt-8 pb-6 border-b border-surface-container-highest flex items-center gap-3">
+      <img src="assets/img/logo.png" alt="Fratelli Maltagliati" class="h-14 w-auto">
+      <div>
+        <p class="font-headline text-base font-bold text-[#42240D] tracking-tighter">Castagne Libere</p>
+        <p class="font-body text-[10px] uppercase tracking-[0.2em] text-secondary">Svizzera Pesciatina</p>
+      </div>
+    </div>
+
+    <ul class="flex-1 overflow-y-auto px-6 py-6 space-y-1 font-headline text-xl">
+      <li><a href="index.html"      class="block py-3 px-3 rounded-md text-[#42240D] hover:bg-surface-container-low transition-colors">Homepage</a></li>
+      <li><a href="chi-siamo.html"  class="block py-3 px-3 rounded-md text-[#42240D] hover:bg-surface-container-low transition-colors">Chi Siamo</a></li>
+      <li><a href="il-metodo.html"  class="block py-3 px-3 rounded-md text-[#42240D] hover:bg-surface-container-low transition-colors">Il Metodo</a></li>
+      <li><a href="il-progetto.html" class="block py-3 px-3 rounded-md text-[#42240D] hover:bg-surface-container-low transition-colors">Il Progetto</a></li>
+      <li><a href="prodotti.html"   class="block py-3 px-3 rounded-md text-[#42240D] hover:bg-surface-container-low transition-colors">Prodotti</a></li>
+    </ul>
+
+    <div class="px-6 py-6 border-t border-surface-container-highest space-y-3">
+      <a href="il-progetto.html#dona"
+         class="flex items-center justify-center gap-2 w-full bg-tertiary text-white font-bold py-3.5 rounded-md shadow-md"
+         style="background:linear-gradient(135deg,#C26A2E 0%,#4B1F00 100%);">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        Dona
+      </a>
+      <a href="https://wa.me/393338260740" target="_blank" rel="noopener"
+         class="flex items-center justify-center gap-2 w-full bg-secondary-container text-on-secondary-container font-medium py-3 rounded-md">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.4A11.94 11.94 0 0012 0C5.4 0 .1 5.3.1 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.4-1.7a11.92 11.92 0 005.6 1.4h.01c6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.4-8.4z"/></svg>
+        Contattaci su WhatsApp
+      </a>
+      <p class="pt-2 text-center text-xs uppercase tracking-widest text-on-surface-variant">
+        Pescia &middot; Pistoia &middot; Toscana
+      </p>
+    </div>
+  </nav>
+</div>
+
+<script>
+  (function(){
+    var btn = document.getElementById('mobile-menu-toggle');
+    var drawer = document.getElementById('mobile-drawer');
+    var backdrop = document.getElementById('mobile-drawer-backdrop');
+    var iconOpen = document.getElementById('mobile-menu-icon-open');
+    var iconClose = document.getElementById('mobile-menu-icon-close');
+    if (!btn || !drawer) return;
+    function setOpen(open){
+      drawer.classList.toggle('hidden', !open);
+      drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      iconOpen.classList.toggle('hidden', open);
+      iconClose.classList.toggle('hidden', !open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+    btn.addEventListener('click', function(){
+      setOpen(drawer.classList.contains('hidden'));
+    });
+    backdrop && backdrop.addEventListener('click', function(){ setOpen(false); });
+    drawer.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ setOpen(false); });
+    });
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape') setOpen(false);
+    });
+  })();
+</script>
 </header>
 <main class="pt-24">
 <!-- Editorial Hero Section -->
