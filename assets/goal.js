@@ -27,6 +27,16 @@ window.GOAL_DATA = { raised: 150, goal: 15000 };
     if (miniFill) { miniFill.style.transition = 'width 1.2s ease-out'; miniFill.style.width = '0%'; animateFill(miniFill, pct(data.raised, data.goal)); }
   }
 
+  /* Card "Obiettivo Raccolta" (il-progetto) */
+  var amts = document.querySelectorAll('[data-goal2-amt]');
+  if (amts.length) {
+    amts.forEach(function (el) { el.textContent = eur(data.raised); });
+    var pct2 = document.querySelector('[data-goal2-pct]');
+    if (pct2) pct2.textContent = (data.raised / data.goal * 100).toLocaleString(locale, { maximumFractionDigits: 1 }) + '%';
+    var fill2 = document.querySelector('[data-goal2-fill]');
+    if (fill2) { fill2.style.transition = 'width 1.2s ease-out'; fill2.style.width = '0%'; animateFill(fill2, pct(data.raised, data.goal)); }
+  }
+
   /* Grafico a tappe (il-progetto) */
   var box = document.querySelector('[data-goal-chart]');
   if (!box) return;
