@@ -1,0 +1,62 @@
+/* ============================================================
+   Fascia alta "Il Progetto" — Salviamo i Castagni
+   Banner fisso in cima, tutto cliccabile -> il-progetto.
+   File separato (CSP 'self') e a prova di purge Tailwind.
+   ============================================================ */
+
+/* fa spazio alla fascia (40px) su tutte le pagine */
+body { padding-top: 40px; }
+
+/* spinge la navbar principale sotto la fascia (tutte hanno top-0 z-50) */
+.top-0.z-50 { top: 40px !important; }
+
+/* spinge il cluster mobile (bandiere+Dona+menu) sotto la fascia */
+.top-2.right-2 { top: 48px !important; }
+
+/* --- la fascia --- */
+.cst-topbar{
+  position:fixed; top:0; left:0; right:0; z-index:50;
+  height:40px; display:flex; align-items:center; justify-content:center;
+  gap:.6rem; padding:0 .9rem; overflow:hidden;
+  background:linear-gradient(135deg,#C26A2E 0%,#4B1F00 100%);
+  color:#fff; text-decoration:none;
+  font-family:'Work Sans',ui-sans-serif,system-ui,-apple-system,sans-serif;
+  font-size:14px; line-height:1;
+  box-shadow:0 1px 6px rgba(0,0,0,.18);
+}
+.cst-topbar .cst-txt{ position:relative; z-index:1; font-weight:500; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.cst-topbar .cst-txt b{ font-weight:700; }
+.cst-topbar .cst-cta{
+  position:relative; z-index:1;
+  display:inline-flex; align-items:center; gap:.3rem;
+  font-weight:700; white-space:nowrap;
+  background:rgba(255,255,255,.16); border-radius:999px;
+  padding:.26rem .5rem .26rem .72rem;
+  transition:background .25s ease;
+}
+.cst-topbar:hover .cst-cta{ background:rgba(255,255,255,.30); }
+.cst-topbar .cst-arrow{ display:inline-block; animation:cstNudge 1.3s ease-in-out infinite; }
+.cst-topbar .cst-short{ display:none; }
+
+/* riflesso di luce che scorre per invitare al click */
+.cst-shimmer{
+  position:absolute; inset:0; pointer-events:none;
+  background:linear-gradient(100deg,transparent 20%,rgba(255,255,255,.22) 50%,transparent 80%);
+  background-size:200% 100%;
+  animation:cstShimmer 3.6s linear infinite;
+}
+
+@keyframes cstNudge{ 0%,100%{transform:translateX(0)} 50%{transform:translateX(4px)} }
+@keyframes cstShimmer{ 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+
+/* mobile: testo piu corto, fascia compatta */
+@media (max-width:640px){
+  .cst-topbar{ font-size:12.5px; gap:.4rem; padding:0 .6rem; }
+  .cst-topbar .cst-full{ display:none; }
+  .cst-topbar .cst-short{ display:inline; }
+}
+
+/* rispetta chi ha ridotto le animazioni */
+@media (prefers-reduced-motion:reduce){
+  .cst-topbar .cst-arrow, .cst-shimmer{ animation:none; }
+}
