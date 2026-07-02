@@ -4,25 +4,25 @@
    File separato (CSP 'self') e a prova di purge Tailwind.
    ============================================================ */
 
-/* fa spazio alla fascia (40px) su tutte le pagine */
-body { padding-top: 40px; }
+/* fa spazio alla fascia (54px) su tutte le pagine */
+body { padding-top: 54px; }
 
 /* spinge la navbar principale sotto la fascia (tutte hanno top-0 z-50) */
-.top-0.z-50 { top: 40px !important; }
+.top-0.z-50 { top: 54px !important; }
 
 /* spinge il cluster mobile (bandiere+Dona+menu) sotto la fascia */
-.top-2.right-2 { top: 48px !important; }
+.top-2.right-2 { top: 62px !important; }
 
 /* --- la fascia --- */
 .cst-topbar{
   position:fixed; top:0; left:0; right:0; z-index:50;
-  height:40px; display:flex; align-items:center; justify-content:center;
-  gap:.6rem; padding:0 .9rem; overflow:hidden;
+  height:54px; display:flex; align-items:center; justify-content:center;
+  gap:.7rem; padding:0 1rem; overflow:hidden;
   background:linear-gradient(135deg,#C26A2E 0%,#4B1F00 100%);
   color:#fff; text-decoration:none;
   font-family:'Work Sans',ui-sans-serif,system-ui,-apple-system,sans-serif;
-  font-size:14px; line-height:1;
-  box-shadow:0 1px 6px rgba(0,0,0,.18);
+  font-size:16px; line-height:1.15;
+  box-shadow:0 2px 8px rgba(0,0,0,.22);
 }
 .cst-topbar .cst-txt{ position:relative; z-index:1; font-weight:500; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 .cst-topbar .cst-txt b{ font-weight:700; }
@@ -51,7 +51,7 @@ body { padding-top: 40px; }
 
 /* mobile: testo piu corto, fascia compatta */
 @media (max-width:640px){
-  .cst-topbar{ font-size:12.5px; gap:.4rem; padding:0 .6rem; }
+  .cst-topbar{ font-size:14px; gap:.45rem; padding:0 .65rem; }
   .cst-topbar .cst-full{ display:none; }
   .cst-topbar .cst-short{ display:inline; }
 }
