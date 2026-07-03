@@ -90,4 +90,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://salviamoicastagni.it/en/prodotti.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://salviamoicastagni.it/de/prodotti.html"/>
   </url>
+  <url>
+    <loc>https://salviamoicastagni.it/sostieni.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
