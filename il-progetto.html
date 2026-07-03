@@ -211,46 +211,17 @@
       pezzo di territorio strappato all&rsquo;abbandono.
     </p>
     <div class="mt-10 flex flex-wrap justify-center gap-4">
-      <a href="#bonifico" class="bg-tertiary-fixed text-primary font-bold px-8 py-4 rounded-md text-lg hover:scale-105 transition-all shadow-lg inline-flex items-center gap-2">
+      <a href="#padrino" class="bg-tertiary-fixed text-primary font-bold px-8 py-4 rounded-md text-lg hover:scale-105 transition-all shadow-lg inline-flex items-center gap-2">
         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-        Donazione libera
+        Adotta un castagno &middot; 99€
       </a>
-      <a href="#padrino" class="bg-white/10 border border-white/40 text-white font-medium px-8 py-4 rounded-md text-lg hover:bg-white/20 transition-all">
-        Diventa padrino &middot; 99€
+      <a href="sostieni.html" class="bg-white/10 border border-white/40 text-white font-medium px-8 py-4 rounded-md text-lg hover:bg-white/20 transition-all">
+        Aiutaci con una donazione
       </a>
     </div>
     <p class="mt-6 text-sm text-on-primary-container">
-      Anche un piccolo contributo libero ci aiuta &mdash; con un bonifico bancario, dell&rsquo;importo che preferisci.
+      Adotta un castagno e vieni a vederlo di persona, oppure sostienici con una donazione libera dell&rsquo;importo che preferisci.
     </p>
-
-    <div id="bonifico" class="mt-10 max-w-xl mx-auto bg-white/95 text-primary rounded-xl p-8 text-left shadow-2xl scroll-mt-28">
-      <h3 class="font-headline text-2xl font-bold text-center mb-1">Donazione libera &middot; Bonifico</h3>
-      <p class="text-sm text-on-surface-variant text-center mb-6">Dell&rsquo;importo che preferisci. Ogni euro va al recupero del castagneto.</p>
-      <dl class="divide-y divide-surface-container-highest">
-        <div class="flex justify-between items-start gap-4 py-2.5">
-          <dt class="text-sm text-on-surface-variant shrink-0">Beneficiario</dt>
-          <dd class="font-medium text-right">Giacomo Maltagliati</dd>
-        </div>
-        <div class="flex justify-between items-start gap-4 py-2.5">
-          <dt class="text-sm text-on-surface-variant shrink-0">IBAN</dt>
-          <dd class="font-mono font-semibold text-right break-all">IT21 C036 6901 6003 3784 1338 694</dd>
-        </div>
-        <div class="flex justify-between items-start gap-4 py-2.5">
-          <dt class="text-sm text-on-surface-variant shrink-0">BIC/SWIFT</dt>
-          <dd class="font-mono font-semibold text-right">REVOITM2</dd>
-        </div>
-        <div class="flex justify-between items-start gap-4 py-2.5">
-          <dt class="text-sm text-on-surface-variant shrink-0">Banca</dt>
-          <dd class="text-right"><span class="font-medium">Revolut Bank UAB</span><br><span class="text-sm text-on-surface-variant">Via Dante 7, 20123 Milano (MI), Italia</span></dd>
-        </div>
-      </dl>
-      <button type="button" onclick="navigator.clipboard.writeText('IT21C0366901600337841338694').then(()=>{this.querySelector('span').textContent='IBAN copiato ✓'})"
-        class="mt-6 w-full inline-flex items-center justify-center gap-2 text-white font-bold px-6 py-3 rounded-md hover:scale-[1.02] transition-all shadow-md"
-        style="background:linear-gradient(135deg,#C26A2E 0%,#4B1F00 100%);">
-        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
-        <span>Copia IBAN</span>
-      </button>
-    </div>
   </div>
 </section>
 
@@ -308,7 +279,7 @@
 </ol>
 <p class="mt-10 text-center text-lg text-on-surface-variant" data-goal-next></p>
 <div class="mt-6 flex flex-wrap justify-center gap-4">
-<a href="#bonifico" class="inline-flex items-center gap-2 text-white font-bold px-8 py-4 rounded-md text-lg hover:scale-105 transition-all shadow-lg" style="background:linear-gradient(135deg,#C26A2E 0%,#4B1F00 100%);">Dona ora</a>
+<a href="sostieni.html" class="inline-flex items-center gap-2 text-white font-bold px-8 py-4 rounded-md text-lg hover:scale-105 transition-all shadow-lg" style="background:linear-gradient(135deg,#C26A2E 0%,#4B1F00 100%);">Aiutaci con una donazione</a>
 <a href="#padrino" class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-container font-bold px-8 py-4 rounded-md text-lg hover:scale-105 transition-all">Adotta un castagno &middot; 99&euro;</a>
 </div>
 </div>
@@ -448,7 +419,7 @@
         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
         Scrivici su WhatsApp per adottare
       </a>
-      <p class="mt-4 text-sm text-on-surface-variant">Oppure invia una donazione libera dell&rsquo;importo che preferisci. Ogni euro va al recupero del castagneto.</p>
+      <p class="mt-4 text-sm text-on-surface-variant">Oppure <a href="sostieni.html" class="underline hover:text-primary">aiutaci con una donazione libera</a> dell&rsquo;importo che preferisci.</p>
     </div>
   </div>
 </section>
@@ -541,7 +512,7 @@
 <p class="text-lg text-on-surface-variant leading-relaxed mb-8">
                             Attraverso la "Donazione Libera", diventerai parte del nostro diario di bordo. Riceverai aggiornamenti mensili, video dei droni che monitorano i lavori e il certificato digitale di custode della terra.
                         </p>
-<a href="#bonifico" class="group inline-flex items-center gap-4 bg-primary text-on-primary px-8 py-4 rounded-xl font-medium text-lg hover:bg-primary-container transition-all shadow-md">Donazione Libera<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">favorite</span></a>
+<a href="sostieni.html" class="group inline-flex items-center gap-4 bg-primary text-on-primary px-8 py-4 rounded-xl font-medium text-lg hover:bg-primary-container transition-all shadow-md">Aiutaci con una donazione<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">favorite</span></a>
 </div>
 </div>
 </div>
