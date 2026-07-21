@@ -190,6 +190,49 @@
 </div>
 </div>
 </section>
+<!-- Sezione Video: la nostra storia -->
+<section id="video" class="py-20 md:py-28 bg-surface-container-low scroll-mt-24">
+<div class="max-w-4xl mx-auto px-6 md:px-8 text-center">
+<span class="font-body uppercase tracking-[0.2em] text-sm text-secondary">Guarda</span>
+<h2 class="font-headline text-3xl md:text-5xl text-primary font-bold mt-3 mb-4">La nostra storia, in quattro minuti.</h2>
+<p class="text-lg text-on-surface-variant leading-relaxed max-w-2xl mx-auto mb-10">Chi siamo, dov&rsquo;&egrave; questo bosco, perch&eacute; abbiamo deciso di salvarlo &mdash; e cosa succede se nessuno lo fa.</p>
+<div id="video-storia" class="relative rounded-xl overflow-hidden shadow-2xl bg-primary aspect-video">
+  <button type="button" id="video-storia-play" class="group absolute inset-0 w-full h-full cursor-pointer" aria-label="Riproduci il video: la storia di Giacomo e Giulio">
+    <img src="assets/img/video-storia-poster.jpg" alt="Giacomo e Giulio Maltagliati nel castagneto" width="1024" height="576" loading="lazy" decoding="async" class="w-full h-full object-cover">
+    <span class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/10"></span>
+    <span class="absolute inset-0 flex items-center justify-center">
+      <span class="flex items-center justify-center w-20 h-20 md:w-24 md:h-24 shadow-2xl transition-transform duration-300 group-hover:scale-110" style="border-radius:9999px;background:linear-gradient(135deg,#C26A2E 0%,#4B1F00 100%);">
+        <svg class="w-9 h-9 md:w-11 md:h-11 text-white ml-1" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      </span>
+    </span>
+    <span class="absolute bottom-4 left-0 right-0 px-4 text-white font-body text-sm md:text-base drop-shadow-lg">4 minuti &middot; Giacomo e Giulio Maltagliati</span>
+  </button>
+</div>
+<div class="flex flex-wrap gap-4 justify-center pt-10">
+<a href="il-progetto.html#padrino" class="text-white px-8 py-4 rounded-md font-bold text-lg hover:scale-105 transition-all shadow-lg inline-flex items-center gap-2" style="background:linear-gradient(135deg,#C26A2E 0%,#4B1F00 100%);">🌰 Adotta un castagno &middot; 99&euro;</a>
+<a href="sostieni.html" class="bg-surface-container-highest text-primary px-8 py-4 rounded-md font-medium text-lg hover:scale-105 transition-all inline-flex items-center gap-2">Fai una donazione<span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+<script>
+  (function(){
+    var btn = document.getElementById('video-storia-play');
+    if (!btn) return;
+    btn.addEventListener('click', function(){
+      var box = document.getElementById('video-storia');
+      var v = document.createElement('video');
+      v.setAttribute('controls','');
+      v.setAttribute('autoplay','');
+      v.setAttribute('playsinline','');
+      v.setAttribute('preload','auto');
+      v.setAttribute('poster','assets/img/video-storia-poster.jpg');
+      v.className = 'w-full h-full object-cover bg-black';
+      v.src = 'assets/video/la-storia-720.mp4';
+      box.innerHTML = '';
+      box.appendChild(v);
+    });
+  })();
+</script>
+</section>
 <!-- Fascia numeri d'impatto -->
 <section id="numeri" class="py-20 md:py-28 bg-primary text-on-primary relative overflow-hidden">
 <div class="absolute inset-0 opacity-10" style="background-image:url('assets/img/castagneto.jpg');background-size:cover;background-position:center;"></div>
