@@ -21,7 +21,7 @@
 .asymmetric-clip {
     clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%)
     }</style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://salviamoicastagni.it/#org","name":"Fratelli Maltagliati — Azienda Agricola Le Ravi","alternateName":"Salviamo i Castagni","description":"Castagneti secolari curati a mano nella Svizzera Pesciatina. Farina di castagne tradizionale, castagne secche, progetti di recupero ambientale.","image":"https://salviamoicastagni.it/assets/img/bosco-castagni.jpg","logo":"https://salviamoicastagni.it/assets/img/logo.png","telephone":"+39 333 826 0740","address":{"@type":"PostalAddress","addressRegion":"Toscana","addressCountry":"IT","addressLocality":"Pescia","areaServed":"Svizzera Pesciatina"},"sameAs":["https://wa.me/393338260740"]}</script></head>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://salviamoicastagni.it/#org","name":"Fratelli Maltagliati — Azienda Agricola Le Ravi","alternateName":"Salviamo i Castagni","description":"Castagneti secolari curati a mano nella Svizzera Pesciatina. Farina di castagne tradizionale, castagne secche, progetti di recupero ambientale.","image":"https://salviamoicastagni.it/assets/img/bosco-castagni.jpg","logo":"https://salviamoicastagni.it/assets/img/logo.png","telephone":"+39 333 826 0740","address":{"@type":"PostalAddress","addressRegion":"Toscana","addressCountry":"IT","addressLocality":"Pescia","areaServed":"Svizzera Pesciatina"},"sameAs":["https://wa.me/393338260740"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject","name":"Salviamo i Castagni — la storia di Giacomo e Giulio","description":"Nella Svizzera Pesciatina, sopra Pescia, un castagneto secolare abbandonato da quarant'anni. Giacomo e Giulio Maltagliati hanno deciso di riprenderselo: chi sono, chi era il Nanne, cosa stanno facendo e perche'.","thumbnailUrl":["https://salviamoicastagni.it/assets/img/video-storia-poster.jpg"],"uploadDate":"2026-07-21","duration":"PT4M5S","embedUrl":"https://www.youtube-nocookie.com/embed/4LMQMI1n5GY","contentUrl":"https://www.youtube.com/watch?v=4LMQMI1n5GY","publisher":{"@type":"Organization","name":"Salviamo i Castagni — Azienda Agricola Le Ravi","logo":{"@type":"ImageObject","url":"https://salviamoicastagni.it/assets/img/logo.png"}}}</script></head>
 <body class="bg-background text-on-background font-body selection:bg-secondary-container selection:text-on-secondary-container" data-mode="connect">
 <div class="paper-grain"></div>
 <!-- Navigation -->
@@ -211,6 +211,7 @@
 <div class="flex flex-wrap gap-4 justify-center pt-10">
 <a href="il-progetto.html#padrino" class="text-white px-8 py-4 rounded-md font-bold text-lg hover:scale-105 transition-all shadow-lg inline-flex items-center gap-2" style="background:linear-gradient(135deg,#C26A2E 0%,#4B1F00 100%);">🌰 Adotta un castagno &middot; 99&euro;</a>
 <a href="sostieni.html" class="bg-surface-container-highest text-primary px-8 py-4 rounded-md font-medium text-lg hover:scale-105 transition-all inline-flex items-center gap-2">Fai una donazione<span class="material-symbols-outlined">arrow_forward</span></a>
+<a href="https://www.youtube.com/watch?v=4LMQMI1n5GY" target="_blank" rel="noopener" class="text-primary px-6 py-4 font-medium text-base inline-flex items-center gap-2 border-b border-tertiary hover:scale-105 transition-all">Guarda su YouTube</a>
 </div>
 </div>
 <script>
@@ -219,16 +220,17 @@
     if (!btn) return;
     btn.addEventListener('click', function(){
       var box = document.getElementById('video-storia');
-      var v = document.createElement('video');
-      v.setAttribute('controls','');
-      v.setAttribute('autoplay','');
-      v.setAttribute('playsinline','');
-      v.setAttribute('preload','auto');
-      v.setAttribute('poster','assets/img/video-storia-poster.jpg');
-      v.className = 'w-full h-full object-cover bg-black';
-      v.src = 'assets/video/la-storia-720.mp4';
+      var f = document.createElement('iframe');
+      // youtube-nocookie: nessun cookie di tracciamento finché non si guarda il video
+      f.src = 'https://www.youtube-nocookie.com/embed/4LMQMI1n5GY?autoplay=1&rel=0&modestbranding=1';
+      f.title = 'Salviamo i Castagni — la storia di Giacomo e Giulio';
+      f.width = '560'; f.height = '315';
+      f.className = 'w-full h-full';
+      f.setAttribute('frameborder','0');
+      f.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+      f.setAttribute('allowfullscreen','');
       box.innerHTML = '';
-      box.appendChild(v);
+      box.appendChild(f);
     });
   })();
 </script>
