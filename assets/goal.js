@@ -1,7 +1,7 @@
 /* Raccolta fondi — Lotto 01.
    PER AGGIORNARE LA CIFRA RACCOLTA: cambia solo il numero "raised" qui sotto,
    poi committa e pubblica. Tutte le pagine (IT/EN/DE, grafico e teaser) si aggiornano da sole. */
-window.GOAL_DATA = { raised: 397, goal: 15000 };
+window.GOAL_DATA = { raised: 447, goal: 15000 };
 
 (function () {
   var data = window.GOAL_DATA;
