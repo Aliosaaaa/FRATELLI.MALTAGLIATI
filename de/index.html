@@ -190,6 +190,51 @@
 </div>
 </div>
 </section>
+<!-- Sezione Video: la nostra storia -->
+<section id="video" class="py-20 md:py-28 bg-surface-container-low scroll-mt-24">
+<div class="max-w-4xl mx-auto px-6 md:px-8 text-center">
+<span class="font-body uppercase tracking-[0.2em] text-sm text-secondary">Ansehen</span>
+<h2 class="font-headline text-3xl md:text-5xl text-primary font-bold mt-3 mb-4">Unsere Geschichte, in vier Minuten.</h2>
+<p class="text-lg text-on-surface-variant leading-relaxed max-w-2xl mx-auto mb-10">Wer wir sind, wo dieser Wald liegt, warum wir uns entschieden haben, ihn zu retten &mdash; und was passiert, wenn es niemand tut. <span class="whitespace-nowrap">(Italienischer Ton, deutsche Untertitel auf YouTube verfügbar.)</span></p>
+<div id="video-storia" class="relative rounded-xl overflow-hidden shadow-2xl bg-primary aspect-video">
+  <button type="button" id="video-storia-play" class="group absolute inset-0 w-full h-full cursor-pointer" aria-label="Video abspielen: die Geschichte von Giacomo und Giulio">
+    <img src="../assets/img/video-storia-poster.jpg" alt="Giacomo und Giulio Maltagliati im Kastanienhain" width="1024" height="576" loading="lazy" decoding="async" class="w-full h-full object-cover">
+    <span class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/10"></span>
+    <span class="absolute inset-0 flex items-center justify-center">
+      <span class="flex items-center justify-center w-20 h-20 md:w-24 md:h-24 shadow-2xl transition-transform duration-300 group-hover:scale-110" style="border-radius:9999px;background:linear-gradient(135deg,#C26A2E 0%,#4B1F00 100%);">
+        <svg class="w-9 h-9 md:w-11 md:h-11 text-white ml-1" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      </span>
+    </span>
+    <span class="absolute bottom-4 left-0 right-0 px-4 text-white font-body text-sm md:text-base drop-shadow-lg">4 Minuten &middot; Giacomo und Giulio Maltagliati</span>
+  </button>
+</div>
+<div class="flex flex-wrap gap-4 justify-center pt-10">
+<a href="il-progetto.html#padrino" class="text-white px-8 py-4 rounded-md font-bold text-lg hover:scale-105 transition-all shadow-lg inline-flex items-center gap-2" style="background:linear-gradient(135deg,#C26A2E 0%,#4B1F00 100%);">🌰 Adoptiere einen Kastanienbaum &middot; 99&nbsp;&euro;</a>
+<a href="sostieni.html" class="bg-surface-container-highest text-primary px-8 py-4 rounded-md font-medium text-lg hover:scale-105 transition-all inline-flex items-center gap-2">Jetzt spenden<span class="material-symbols-outlined">arrow_forward</span></a>
+<a href="https://www.youtube.com/watch?v=4LMQMI1n5GY" target="_blank" rel="noopener" class="text-primary px-6 py-4 font-medium text-base inline-flex items-center gap-2 border-b border-tertiary hover:scale-105 transition-all">Auf YouTube ansehen</a>
+</div>
+</div>
+<script>
+  (function(){
+    var btn = document.getElementById('video-storia-play');
+    if (!btn) return;
+    btn.addEventListener('click', function(){
+      var box = document.getElementById('video-storia');
+      var f = document.createElement('iframe');
+      // youtube-nocookie: keine Tracking-Cookies, bis das Video abgespielt wird
+      f.src = 'https://www.youtube-nocookie.com/embed/4LMQMI1n5GY?autoplay=1&rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=de';
+      f.title = 'Salviamo i Castagni — die Geschichte von Giacomo und Giulio';
+      f.width = '560'; f.height = '315';
+      f.className = 'w-full h-full';
+      f.setAttribute('frameborder','0');
+      f.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+      f.setAttribute('allowfullscreen','');
+      box.innerHTML = '';
+      box.appendChild(f);
+    });
+  })();
+</script>
+</section>
 <!-- Zahlen mit Wirkung -->
 <section id="numeri" class="py-20 md:py-28 bg-primary text-on-primary relative overflow-hidden">
 <div class="absolute inset-0 opacity-10" style="background-image:url('../assets/img/castagneto.jpg');background-size:cover;background-position:center;"></div>
@@ -241,7 +286,7 @@
                     Salviamo i Castagni zu unterstützen bedeutet, ein Ökosystem zu schützen, ethische Arbeit zu würdigen und den authentischen Geschmack der Bergtradition wiederzuentdecken.
                 </p>
 <div class="relative z-10 flex flex-wrap justify-center gap-4">
-<a href="il-progetto.html#bonifico" class="inline-block text-white px-10 py-5 rounded-md font-bold text-xl hover:scale-105 transition-all shadow-xl" style="background:linear-gradient(135deg,#C26A2E 0%,#4B1F00 100%);">Jetzt spenden</a>
+<a href="sostieni.html" class="inline-block text-white px-10 py-5 rounded-md font-bold text-xl hover:scale-105 transition-all shadow-xl" style="background:linear-gradient(135deg,#C26A2E 0%,#4B1F00 100%);">Jetzt spenden</a>
 <a href="il-progetto.html#padrino" class="inline-block bg-surface text-primary px-10 py-5 rounded-md font-bold text-xl hover:scale-105 transition-all shadow-xl">Rette einen Kastanienbaum</a>
 </div>
 </div>
