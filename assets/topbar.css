@@ -4,44 +4,54 @@
    File separato (CSP 'self') e a prova di purge Tailwind.
    ============================================================ */
 
-/* fa spazio alla fascia (54px) su tutte le pagine */
-body { padding-top: 54px; }
+/* Altezza in un'unica variabile: la fascia e i tre offset che la seguono
+   non possono piu' andare fuori sincrono. */
+:root{ --cst-h: 74px; }
+@media (max-width:640px){ :root{ --cst-h: 64px; } }
+
+/* fa spazio alla fascia su tutte le pagine */
+body { padding-top: var(--cst-h); }
 
 /* spinge la navbar principale sotto la fascia (tutte hanno top-0 z-50) */
-.top-0.z-50 { top: 54px !important; }
+.top-0.z-50 { top: var(--cst-h) !important; }
 
 /* spinge il cluster mobile (bandiere+Dona+menu) sotto la fascia */
-.top-2.right-2 { top: 62px !important; }
+.top-2.right-2 { top: calc(var(--cst-h) + 8px) !important; }
 
-/* --- la fascia --- */
+/* --- la fascia ---
+   Fondo oro con testo scuro: si stacca dall'header, che e' scuro.
+   Prima era marrone su marrone e si leggeva come parte della navbar. */
 .cst-topbar{
   position:fixed; top:0; left:0; right:0; z-index:50;
-  height:54px; display:flex; align-items:center; justify-content:center;
-  gap:.7rem; padding:0 1rem; overflow:hidden;
-  background:linear-gradient(135deg,#C26A2E 0%,#4B1F00 100%);
-  color:#fff; text-decoration:none;
+  height:var(--cst-h); display:flex; align-items:center; justify-content:center;
+  gap:1rem; padding:0 1rem; overflow:hidden;
+  background:linear-gradient(135deg,#F0B93F 0%,#E0A32E 45%,#C26A2E 100%);
+  color:#2A1408; text-decoration:none;
   font-family:'Work Sans',ui-sans-serif,system-ui,-apple-system,sans-serif;
-  font-size:16px; line-height:1.15;
-  box-shadow:0 2px 8px rgba(0,0,0,.22);
+  font-size:19px; line-height:1.15;
+  box-shadow:0 3px 14px rgba(0,0,0,.28);
 }
-.cst-topbar .cst-txt{ position:relative; z-index:1; font-weight:500; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-.cst-topbar .cst-txt b{ font-weight:700; }
+.cst-topbar .cst-txt{ position:relative; z-index:1; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.cst-topbar .cst-txt b{ font-weight:800; }
+/* la CTA e' un bottone pieno, non un'etichetta semitrasparente */
 .cst-topbar .cst-cta{
   position:relative; z-index:1;
-  display:inline-flex; align-items:center; gap:.3rem;
-  font-weight:700; white-space:nowrap;
-  background:rgba(255,255,255,.16); border-radius:999px;
-  padding:.26rem .5rem .26rem .72rem;
-  transition:background .25s ease;
+  display:inline-flex; align-items:center; gap:.4rem;
+  font-weight:700; white-space:nowrap; font-size:17px;
+  background:#002113; color:#F5F0E6;
+  border-radius:999px;
+  padding:.5rem .95rem .5rem 1.15rem;
+  box-shadow:0 2px 8px rgba(0,0,0,.28);
+  transition:background .25s ease, transform .2s ease;
 }
-.cst-topbar:hover .cst-cta{ background:rgba(255,255,255,.30); }
+.cst-topbar:hover .cst-cta{ background:#0b3a25; transform:translateY(-1px); }
 .cst-topbar .cst-arrow{ display:inline-block; animation:cstNudge 1.3s ease-in-out infinite; }
 .cst-topbar .cst-short{ display:none; }
 
 /* riflesso di luce che scorre per invitare al click */
 .cst-shimmer{
   position:absolute; inset:0; pointer-events:none;
-  background:linear-gradient(100deg,transparent 20%,rgba(255,255,255,.22) 50%,transparent 80%);
+  background:linear-gradient(100deg,transparent 20%,rgba(255,255,255,.45) 50%,transparent 80%);
   background-size:200% 100%;
   animation:cstShimmer 3.6s linear infinite;
 }
@@ -51,9 +61,18 @@ body { padding-top: 54px; }
 
 /* mobile: testo piu corto, fascia compatta */
 @media (max-width:640px){
-  .cst-topbar{ font-size:14px; gap:.45rem; padding:0 .65rem; }
+  .cst-topbar{ font-size:15px; gap:.55rem; padding:0 .65rem; }
+  .cst-topbar .cst-cta{ font-size:14px; padding:.42rem .7rem .42rem .85rem; }
   .cst-topbar .cst-full{ display:none; }
   .cst-topbar .cst-short{ display:inline; }
+}
+
+/* Telefoni stretti: nell'HTML .cst-short ha lo stesso testo di .cst-full,
+   quindi "corto" non accorcia nulla e sotto i ~400px la CTA verrebbe tagliata.
+   Qui il titolo sparisce e resta solo il bottone, che e' cio' che deve vedersi. */
+@media (max-width:400px){
+  .cst-topbar .cst-txt{ display:none; }
+  .cst-topbar .cst-cta{ font-size:15px; padding:.45rem .85rem .45rem 1rem; }
 }
 
 /* rispetta chi ha ridotto le animazioni */
