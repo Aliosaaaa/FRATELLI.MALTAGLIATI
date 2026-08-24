@@ -1,13 +1,19 @@
 /* ============================================================
-   Fascia alta "Il Progetto" — Salviamo i Castagni
-   Banner fisso in cima, tutto cliccabile -> il-progetto.
+   Fascia alta "Adotta un castagno" — Salviamo i Castagni
+   Banner fisso in cima, tutto cliccabile -> il-progetto #padrino.
    File separato (CSP 'self') e a prova di purge Tailwind.
+
+   v2 (24 ago 2026) — la v1 oro non veniva cliccata:
+   posizione + colore + shimmer la facevano leggere come banner
+   pubblicitario, e "Scopri il progetto" non era un'offerta.
+   Ora: fondo verde bosco (si stacca dalla navbar crema), messaggio
+   di urgenza sulla causa, un solo bottone oro pieno.
    ============================================================ */
 
 /* Altezza in un'unica variabile: la fascia e i tre offset che la seguono
    non possono piu' andare fuori sincrono. */
-:root{ --cst-h: 74px; }
-@media (max-width:640px){ :root{ --cst-h: 64px; } }
+:root{ --cst-h: 78px; }
+@media (max-width:640px){ :root{ --cst-h: 66px; } }
 
 /* fa spazio alla fascia su tutte le pagine */
 body { padding-top: var(--cst-h); }
@@ -19,63 +25,89 @@ body { padding-top: var(--cst-h); }
 .top-2.right-2 { top: calc(var(--cst-h) + 8px) !important; }
 
 /* --- la fascia ---
-   Fondo oro con testo scuro: si stacca dall'header, che e' scuro.
-   Prima era marrone su marrone e si leggeva come parte della navbar. */
+   Verde bosco profondo sotto una navbar crema: massimo stacco, e
+   soprattutto NON somiglia piu' a una barra promozionale. */
 .cst-topbar{
   position:fixed; top:0; left:0; right:0; z-index:50;
   height:var(--cst-h); display:flex; align-items:center; justify-content:center;
-  gap:1rem; padding:0 1rem; overflow:hidden;
-  background:linear-gradient(135deg,#F0B93F 0%,#E0A32E 45%,#C26A2E 100%);
-  color:#2A1408; text-decoration:none;
+  gap:1.15rem; padding:0 1rem; overflow:hidden;
+  background:
+    radial-gradient(120% 180% at 78% 50%, rgba(240,185,63,.16) 0%, transparent 60%),
+    linear-gradient(100deg,#052A1A 0%,#0A4227 55%,#0D5230 100%);
+  color:#F5EFE2; text-decoration:none;
   font-family:'Work Sans',ui-sans-serif,system-ui,-apple-system,sans-serif;
   font-size:19px; line-height:1.15;
-  box-shadow:0 3px 14px rgba(0,0,0,.28);
+  box-shadow:0 4px 16px rgba(0,0,0,.30);
+  border-bottom:2px solid rgba(240,185,63,.55);
+  /* entrata: la fascia SCENDE all'apertura della pagina.
+     Lo spazio e' gia' riservato da body{padding-top}, quindi zero
+     scivolamento del contenuto (nessun CLS). */
+  transform:translateY(-100%);
+  animation:cstDrop .55s cubic-bezier(.22,1,.36,1) .35s forwards;
 }
-.cst-topbar .cst-txt{ position:relative; z-index:1; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-.cst-topbar .cst-txt b{ font-weight:800; }
-/* la CTA e' un bottone pieno, non un'etichetta semitrasparente */
+.cst-topbar .cst-txt{
+  position:relative; z-index:1; font-weight:500; letter-spacing:.005em;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+/* la parola che fa male sta in oro: e' li' che cade l'occhio */
+.cst-topbar .cst-txt b{ font-weight:800; color:#F5C24B; }
+
+/* la CTA e' un bottone pieno oro: unico elemento chiaro della fascia,
+   quindi l'unico posto dove l'occhio capisce che si clicca */
 .cst-topbar .cst-cta{
   position:relative; z-index:1;
-  display:inline-flex; align-items:center; gap:.4rem;
-  font-weight:700; white-space:nowrap; font-size:17px;
-  background:#002113; color:#F5F0E6;
+  display:inline-flex; align-items:center; gap:.45rem;
+  font-weight:800; white-space:nowrap; font-size:17px;
+  background:linear-gradient(135deg,#F5C24B 0%,#E0A32E 100%);
+  color:#2A1408;
   border-radius:999px;
-  padding:.5rem .95rem .5rem 1.15rem;
-  box-shadow:0 2px 8px rgba(0,0,0,.28);
-  transition:background .25s ease, transform .2s ease;
+  padding:.55rem 1.05rem .55rem 1.25rem;
+  box-shadow:0 2px 10px rgba(0,0,0,.30);
+  transition:transform .2s ease, box-shadow .25s ease, filter .25s ease;
 }
-.cst-topbar:hover .cst-cta{ background:#0b3a25; transform:translateY(-1px); }
-.cst-topbar .cst-arrow{ display:inline-block; animation:cstNudge 1.3s ease-in-out infinite; }
+.cst-topbar:hover .cst-cta{ transform:translateY(-1px); filter:brightness(1.06); box-shadow:0 4px 14px rgba(0,0,0,.36); }
+.cst-topbar:active .cst-cta{ transform:translateY(0); }
+.cst-topbar .cst-arrow{ display:inline-block; animation:cstNudge 1.6s ease-in-out infinite; }
 .cst-topbar .cst-short{ display:none; }
 
-/* riflesso di luce che scorre per invitare al click */
-.cst-shimmer{
-  position:absolute; inset:0; pointer-events:none;
-  background:linear-gradient(100deg,transparent 20%,rgba(255,255,255,.45) 50%,transparent 80%);
-  background-size:200% 100%;
-  animation:cstShimmer 3.6s linear infinite;
+/* Un solo "battito" del bottone: all'entrata e, una seconda volta,
+   quando il visitatore ha scrollato mezza pagina (classe messa da topbar.js).
+   Niente shimmer perenne: era il segnale piu' forte di "pubblicita'". */
+.cst-topbar.cst-pulse .cst-cta{ animation:cstPulse 1.1s ease-out 1; }
+
+@keyframes cstDrop{ to{ transform:translateY(0); } }
+@keyframes cstNudge{ 0%,100%{transform:translateX(0)} 50%{transform:translateX(4px)} }
+@keyframes cstPulse{
+  0%   { box-shadow:0 2px 10px rgba(0,0,0,.30), 0 0 0 0 rgba(245,194,75,.65); }
+  70%  { box-shadow:0 2px 10px rgba(0,0,0,.30), 0 0 0 14px rgba(245,194,75,0); }
+  100% { box-shadow:0 2px 10px rgba(0,0,0,.30), 0 0 0 0 rgba(245,194,75,0); }
 }
 
-@keyframes cstNudge{ 0%,100%{transform:translateX(0)} 50%{transform:translateX(4px)} }
-@keyframes cstShimmer{ 0%{background-position:200% 0} 100%{background-position:-200% 0} }
-
-/* mobile: testo piu corto, fascia compatta */
+/* mobile: testo piu corto, fascia compatta.
+   ⚠️ Il grosso dei telefoni sta fra 360 e 430 CSS px (iPhone 14/15 = 393):
+   e' proprio li' che messaggio + bottone devono STARE INSIEME su una riga.
+   La v1 nascondeva il testo sotto i 400px e su quasi tutti gli iPhone
+   restava solo un bottone nudo, senza il motivo per cliccarlo. */
 @media (max-width:640px){
-  .cst-topbar{ font-size:15px; gap:.55rem; padding:0 .65rem; }
-  .cst-topbar .cst-cta{ font-size:14px; padding:.42rem .7rem .42rem .85rem; }
+  .cst-topbar{ font-size:14px; gap:.5rem; padding:0 .6rem; }
+  .cst-topbar .cst-cta{ font-size:13px; padding:.42rem .72rem .42rem .85rem; gap:.3rem; }
   .cst-topbar .cst-full{ display:none; }
   .cst-topbar .cst-short{ display:inline; }
 }
-
-/* Telefoni stretti: nell'HTML .cst-short ha lo stesso testo di .cst-full,
-   quindi "corto" non accorcia nulla e sotto i ~400px la CTA verrebbe tagliata.
-   Qui il titolo sparisce e resta solo il bottone, che e' cio' che deve vedersi. */
 @media (max-width:400px){
+  .cst-topbar{ font-size:13px; gap:.42rem; padding:0 .5rem; }
+  .cst-topbar .cst-cta{ font-size:12.5px; padding:.4rem .65rem .4rem .78rem; }
+}
+
+/* Solo sui telefoni davvero stretti (vecchi SE) resta il bottone da solo. */
+@media (max-width:340px){
   .cst-topbar .cst-txt{ display:none; }
-  .cst-topbar .cst-cta{ font-size:15px; padding:.45rem .85rem .45rem 1rem; }
+  .cst-topbar .cst-cta{ font-size:14px; padding:.5rem .95rem .5rem 1.1rem; }
 }
 
 /* rispetta chi ha ridotto le animazioni */
 @media (prefers-reduced-motion:reduce){
-  .cst-topbar .cst-arrow, .cst-shimmer{ animation:none; }
+  .cst-topbar{ transform:none; animation:none; }
+  .cst-topbar .cst-arrow{ animation:none; }
+  .cst-topbar.cst-pulse .cst-cta{ animation:none; }
 }
