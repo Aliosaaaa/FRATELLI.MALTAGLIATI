@@ -1,1 +1,5 @@
 node_modules/
+
+# firme locali delle miniature social (contengono percorsi del Mac)
+assets/img/social/*.src
+.DS_Store

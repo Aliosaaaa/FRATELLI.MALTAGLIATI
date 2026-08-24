@@ -1,0 +1,8 @@
+# Ultimi post pubblicati su Instagram — li legge tools/social_manuale.py.
+# Non serve scriverci a mano: lo compila lo script quando incolli i link.
+#
+# Una riga per post:  cartella | link instagram | didascalia | [secondo del fotogramma]
+#   cartella  = il nome della cartella in CONSEGNA/PUBBLICAZIONI/
+#   didascalia= se la lasci vuota la prende dal file CAPTION del post
+#   secondo   = facoltativo, solo se la miniatura scelta non ti piace
+#               (es. "... | 8.5" prende il fotogramma all'8,5° secondo)
