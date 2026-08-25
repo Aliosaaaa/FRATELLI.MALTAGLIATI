@@ -69,5 +69,17 @@
   display:-webkit-box; -webkit-line-clamp:2; line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
 }
 
+
+/* Segnaposto: tengono lo spazio prima che i video arrivino, cosi' la sezione
+   non spinge giu' il resto della pagina quando si riempie. Tinta della
+   superficie: se il json mancasse e restassero a vista, si leggono come
+   spazio vuoto, non come riquadri rotti. */
+.sc-skel{ pointer-events:none; }
+.sc-skel .sc-thumb{ background:#f3e7ce; box-shadow:none; }
+.sc-skel .sc-thumb::after{ display:none; }
+/* stessa misura esatta di .sc-cap (13.5px x 1.45 x 2 righe): se il
+   segnaposto e la didascalia non combaciano, la pagina fa un saltino */
+.sc-cap-skel{ display:block; font-size:13.5px; line-height:1.45; height:2.9em; margin:.6rem .1rem 0; }
+
 /* la sezione non esiste finche' non ci sono post: niente buco vuoto in home */
 .sc-wrap[hidden]{ display:none; }

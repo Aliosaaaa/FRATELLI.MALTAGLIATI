@@ -48,7 +48,7 @@
   fetch(src, { cache: 'no-cache' })
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (data) {
-      if (!data || !data.items || !data.items.length) return;   // resta nascosta
+      if (!data || !data.items || !data.items.length) { wrap.hidden = true; return; }
 
       grid.innerHTML = data.items.map(function (it) {
         var href = /^https:\/\/(www\.)?instagram\.com\//.test(it.permalink || '') ? it.permalink : '';
@@ -66,7 +66,6 @@
         var link = wrap.querySelector('[data-social-profile]');
         if (link) link.setAttribute('href', data.profile);
       }
-      wrap.hidden = false;
     })
-    .catch(function () { /* json assente o rotto: la sezione resta invisibile */ });
+    .catch(function () { wrap.hidden = true; });   /* json assente o rotto: via la sezione */
 })();
