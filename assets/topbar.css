@@ -12,8 +12,8 @@
 
 /* Altezza in un'unica variabile: la fascia e i tre offset che la seguono
    non possono piu' andare fuori sincrono. */
-:root{ --cst-h: 78px; }
-@media (max-width:640px){ :root{ --cst-h: 66px; } }
+:root{ --cst-h: 90px; }
+@media (max-width:640px){ :root{ --cst-h: 76px; } }
 
 /* fa spazio alla fascia su tutte le pagine */
 body { padding-top: var(--cst-h); }
@@ -36,7 +36,7 @@ body { padding-top: var(--cst-h); }
     linear-gradient(100deg,#052A1A 0%,#0A4227 55%,#0D5230 100%);
   color:#F5EFE2; text-decoration:none;
   font-family:'Work Sans',ui-sans-serif,system-ui,-apple-system,sans-serif;
-  font-size:19px; line-height:1.15;
+  font-size:21px; line-height:1.15;
   box-shadow:0 4px 16px rgba(0,0,0,.30);
   border-bottom:2px solid rgba(240,185,63,.55);
   /* entrata: la fascia SCENDE all'apertura della pagina.
@@ -57,11 +57,11 @@ body { padding-top: var(--cst-h); }
 .cst-topbar .cst-cta{
   position:relative; z-index:1;
   display:inline-flex; align-items:center; gap:.45rem;
-  font-weight:800; white-space:nowrap; font-size:17px;
+  font-weight:800; white-space:nowrap; font-size:18.5px;
   background:linear-gradient(135deg,#F5C24B 0%,#E0A32E 100%);
   color:#2A1408;
   border-radius:999px;
-  padding:.55rem 1.05rem .55rem 1.25rem;
+  padding:.62rem 1.15rem .62rem 1.35rem;
   box-shadow:0 2px 10px rgba(0,0,0,.30);
   transition:transform .2s ease, box-shadow .25s ease, filter .25s ease;
 }
@@ -89,14 +89,14 @@ body { padding-top: var(--cst-h); }
    La v1 nascondeva il testo sotto i 400px e su quasi tutti gli iPhone
    restava solo un bottone nudo, senza il motivo per cliccarlo. */
 @media (max-width:640px){
-  .cst-topbar{ font-size:14px; gap:.5rem; padding:0 .6rem; }
-  .cst-topbar .cst-cta{ font-size:13px; padding:.42rem .72rem .42rem .85rem; gap:.3rem; }
+  .cst-topbar{ font-size:15px; gap:.55rem; padding:0 .65rem; }
+  .cst-topbar .cst-cta{ font-size:14px; padding:.48rem .8rem .48rem .95rem; gap:.32rem; }
   .cst-topbar .cst-full{ display:none; }
   .cst-topbar .cst-short{ display:inline; }
 }
 @media (max-width:400px){
-  .cst-topbar{ font-size:13px; gap:.42rem; padding:0 .5rem; }
-  .cst-topbar .cst-cta{ font-size:12.5px; padding:.4rem .65rem .4rem .78rem; }
+  .cst-topbar{ font-size:13.5px; gap:.45rem; padding:0 .55rem; }
+  .cst-topbar .cst-cta{ font-size:13px; padding:.44rem .7rem .44rem .82rem; }
 }
 
 /* Solo sui telefoni davvero stretti (vecchi SE) resta il bottone da solo. */
