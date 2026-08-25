@@ -38,12 +38,25 @@ DATA_RE = re.compile(r"^(\d{4})-(\d{2})-(\d{2})_")
 # ---------------------------------------------------------------- lettura dati
 
 def cartelle_recenti():
-    """Le cartelle-post piu' recenti, dalla piu' nuova."""
+    """Le cartelle-post piu' recenti, dalla piu' nuova.
+
+    ⚠️ Salta quelle con data FUTURA: il materiale si prepara in anticipo, ma
+    un post non ancora uscito su Instagram non puo' finire in home — il link
+    non porterebbe da nessuna parte e la data direbbe "oggi"."""
     if not PUBBLICAZIONI.is_dir():
         print(f"⚠️  Non trovo la cartella delle pubblicazioni:\n   {PUBBLICAZIONI}")
         print("   Se l'hai spostata, lancia con:  PUBBLICAZIONI='/nuovo/percorso' ...")
         return []
-    dirs = [d for d in PUBBLICAZIONI.iterdir() if d.is_dir() and DATA_RE.match(d.name)]
+    import datetime
+    oggi = datetime.date.today().isoformat()
+    dirs, futuri = [], []
+    for d in PUBBLICAZIONI.iterdir():
+        if not (d.is_dir() and DATA_RE.match(d.name)):
+            continue
+        (futuri if d.name[:10] > oggi else dirs).append(d)
+    if futuri:
+        print(f"ℹ️  {len(futuri)} post con data futura, non ancora usciti: li salto "
+              f"({', '.join(sorted(f.name for f in futuri))})")
     return sorted(dirs, key=lambda d: d.name, reverse=True)
 
 
@@ -191,7 +204,12 @@ def main():
             break
         v = voci.get(d.name)
         if not v:
-            continue
+            if "--fallback-profilo" not in sys.argv:
+                continue
+            # ripiego: la card porta al profilo. Meglio una sezione viva con un
+            # click in piu' che una sezione invisibile. Il post resta comunque
+            # nell'elenco dei "senza link", quindi al prossimo giro lo richiede.
+            v = {"link": PROFILO, "testo": "", "secondo": None}
         # didascalia lasciata vuota nel file: la ricava dalla caption del post
         if not v.get("testo"):
             v["testo"] = didascalia_proposta(d)

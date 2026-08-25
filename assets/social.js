@@ -12,19 +12,28 @@
   var base = wrap.getAttribute('data-social-base') || '';
   var lang = (document.documentElement.lang || 'it').slice(0, 2);
 
+  /* singolare e plurale separati: "1 giorni fa" e' il classico refuso
+     da contatore automatico, e si nota subito. */
+  var IT = { today: 'oggi', yday: 'ieri', d1: 'giorno fa', d: 'giorni fa',
+             w1: 'settimana fa', w: 'settimane fa', mo1: 'mese fa', mo: 'mesi fa' };
   var AGO = {
-    it: { today: 'oggi', d: 'giorni fa', w: 'settimane fa', mo: 'mesi fa' },
-    en: { today: 'today', d: 'days ago', w: 'weeks ago', mo: 'months ago' },
-    de: { today: 'heute', d: 'Tage her', w: 'Wochen her', mo: 'Monate her' }
-  }[lang] || { today: 'oggi', d: 'giorni fa', w: 'settimane fa', mo: 'mesi fa' };
+    it: IT,
+    en: { today: 'today', yday: 'yesterday', d1: 'day ago', d: 'days ago',
+          w1: 'week ago', w: 'weeks ago', mo1: 'month ago', mo: 'months ago' },
+    de: { today: 'heute', yday: 'gestern', d1: 'Tag her', d: 'Tage her',
+          w1: 'Woche her', w: 'Wochen her', mo1: 'Monat her', mo: 'Monate her' }
+  }[lang] || IT;
 
   function ago(iso) {
     if (!iso) return '';
     var days = Math.floor((Date.now() - new Date(iso).getTime()) / 86400000);
     if (days <= 0) return AGO.today;
+    if (days === 1) return AGO.yday;
     if (days < 14) return days + ' ' + AGO.d;
-    if (days < 60) return Math.round(days / 7) + ' ' + AGO.w;
-    return Math.round(days / 30) + ' ' + AGO.mo;
+    var n;
+    if (days < 60) { n = Math.round(days / 7); return n + ' ' + (n === 1 ? AGO.w1 : AGO.w); }
+    n = Math.round(days / 30);
+    return n + ' ' + (n === 1 ? AGO.mo1 : AGO.mo);
   }
 
   /* Didascalie e link arrivano da Instagram: si scrivono come testo, mai come HTML. */
