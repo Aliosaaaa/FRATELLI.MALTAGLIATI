@@ -26,9 +26,23 @@ IMG_DIR = ROOT / "assets" / "img" / "social"
 JSON_OUT = ROOT / "assets" / "social.json"
 PROFILO = "https://www.instagram.com/salviamoicastagni/"
 
-PUBBLICAZIONI = pathlib.Path(os.environ.get("PUBBLICAZIONI") or (
-    pathlib.Path.home() / "Desktop" / "PROGETTI CLAUDE" / "AGENZIA MARKETING" /
-    "clienti" / "salviamo-castagni" / "CONSEGNA" / "PUBBLICAZIONI"))
+def _pubblicazioni():
+    """Dove stanno le cartelle dei post. Da settembre 2026 il lavoro si e'
+    spostato in ~/AIOSHA (il Desktop e' su iCloud e corrompe i repo git);
+    il vecchio percorso resta come riserva per le macchine non ancora migrate."""
+    if os.environ.get("PUBBLICAZIONI"):
+        return pathlib.Path(os.environ["PUBBLICAZIONI"])
+    coda = ("clienti", "salviamo-castagni", "CONSEGNA", "PUBBLICAZIONI")
+    casa = pathlib.Path.home()
+    for radice in (casa / "AIOSHA" / "progetti" / "AGENZIA MARKETING",
+                   casa / "Desktop" / "PROGETTI CLAUDE" / "AGENZIA MARKETING"):
+        c = radice.joinpath(*coda)
+        if c.is_dir():
+            return c
+    return casa / "AIOSHA" / "progetti" / "AGENZIA MARKETING" / pathlib.Path(*coda)
+
+
+PUBBLICAZIONI = _pubblicazioni()
 
 QUANTI = 6          # card in home
 THUMB_W, THUMB_H = 540, 960
@@ -61,14 +75,16 @@ def cartelle_recenti():
 
 
 def media_di(cartella):
-    """Il video del post; se manca, la prima foto per le storie."""
+    """Il video del post — e solo il video.
+
+    La sezione in home si chiama "gli ultimi video": un carosello o un post
+    di sole foto non ci va, sia perche' la scritta mentirebbe, sia perche' una
+    slide di testo in mezzo a cinque fotogrammi di bosco si vede che stona.
+    I post senza video vengono saltati e al loro posto sale il video precedente."""
     for v in sorted(cartella.glob("1_VIDEO*.mp4")):
         return v, True
     for v in sorted(cartella.glob("*.mp4")):
         return v, True
-    foto = sorted((cartella / "2_FOTO_per_storie").glob("*.jpg")) if (cartella / "2_FOTO_per_storie").is_dir() else []
-    if foto:
-        return foto[0], False
     return None, False
 
 
@@ -215,7 +231,7 @@ def main():
             v["testo"] = didascalia_proposta(d)
         sorgente, is_video = media_di(d)
         if not sorgente:
-            print(f"⚠️  {d.name}: nessun video o foto, salto.")
+            print(f"⚠️  {d.name}: non e' un video (carosello o foto), salto.")
             continue
         nome = re.sub(r"[^a-zA-Z0-9_-]", "", d.name) + ".jpg"
         dest = IMG_DIR / nome
