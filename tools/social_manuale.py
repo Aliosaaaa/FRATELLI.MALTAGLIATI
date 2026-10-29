@@ -105,6 +105,11 @@ def didascalia_proposta(cartella, limite=110):
                 break
         if righe:
             t = re.sub(r"\s+", " ", " ".join(righe)).strip()
+            # le CAPTION sono in markdown: i segni di grassetto e corsivo
+            # finirebbero scritti tali e quali nella card della home
+            t = t.replace("**", "").replace("__", "")
+            t = re.sub(r"(?<![\w*])\*(?!\s)([^*]+?)(?<!\s)\*(?![\w*])", r"\1", t)
+            t = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", t)
             t = re.sub(r"[«»\"]", "", t)
             if len(t) > limite:
                 t = t[:limite].rsplit(" ", 1)[0] + "…"
@@ -155,7 +160,11 @@ def leggi_lista():
         if not riga or riga.startswith("#"):
             continue
         p = [x.strip() for x in riga.split("|")]
-        if len(p) < 2 or not p[1]:
+        if len(p) < 2:
+            continue
+        # il link puo' essere vuoto: la riga serve allora solo a fissare la
+        # didascalia o il fotogramma, e il post resta fra quelli da chiedere
+        if not p[1] and len(p) < 4:
             continue
         voci[p[0]] = {
             "link": p[1],
@@ -171,6 +180,8 @@ def scrivi_lista(voci):
         "# Una riga per post:  cartella | link instagram | didascalia | [secondo del fotogramma]",
         "# Il 4o campo e' facoltativo: mettilo solo se la miniatura scelta non ti piace",
         "# (es. ...| 8.5  prende il fotogramma all'8,5o secondo).",
+        "# Il link puo' restare vuoto: la riga serve allora solo a fissare il",
+        "# fotogramma, e al prossimo giro il link te lo richiede lo stesso.",
         "",
     ]
     for nome in sorted(voci, reverse=True):
@@ -190,7 +201,8 @@ def main():
         return 1
 
     if interattivo:
-        mancanti = [d for d in cartelle[:QUANTI + 4] if d.name not in voci]
+        mancanti = [d for d in cartelle[:QUANTI + 4]
+                    if not (voci.get(d.name) or {}).get("link")]
         if mancanti:
             print(f"\n🌰 Ci sono {len(mancanti)} post senza il link di Instagram.")
             print("   Incolla il link del post (o premi Invio per saltarlo).\n")
@@ -207,7 +219,9 @@ def main():
                 print("   ⚠️  non sembra un link di Instagram, lo salto.\n")
                 continue
             nuovo = input("   didascalia (Invio per tenere quella sopra): ").strip()
-            voci[d.name] = {"link": link.split("?")[0], "testo": nuovo or proposta, "secondo": None}
+            prima = voci.get(d.name) or {}
+            voci[d.name] = {"link": link.split("?")[0], "testo": nuovo or proposta,
+                            "secondo": prima.get("secondo")}
             print()
         scrivi_lista(voci)
 
@@ -218,14 +232,16 @@ def main():
     for d in cartelle:
         if len(items) >= QUANTI:
             break
-        v = voci.get(d.name)
-        if not v:
+        v = dict(voci.get(d.name) or {})
+        v.setdefault("testo", "")
+        v.setdefault("secondo", None)
+        if not v.get("link"):
             if "--fallback-profilo" not in sys.argv:
                 continue
             # ripiego: la card porta al profilo. Meglio una sezione viva con un
             # click in piu' che una sezione invisibile. Il post resta comunque
             # nell'elenco dei "senza link", quindi al prossimo giro lo richiede.
-            v = {"link": PROFILO, "testo": "", "secondo": None}
+            v["link"] = PROFILO
         # didascalia lasciata vuota nel file: la ricava dalla caption del post
         if not v.get("testo"):
             v["testo"] = didascalia_proposta(d)

@@ -6,3 +6,5 @@
 #   didascalia= se la lasci vuota la prende dal file CAPTION del post
 #   secondo   = facoltativo, solo se la miniatura scelta non ti piace
 #               (es. "... | 8.5" prende il fotogramma all'8,5° secondo)
+2026-10-21_targa-maremma |  |  | 10.85
+2026-10-16_parole-del-bosco-capriolo |  |  | 11.97
